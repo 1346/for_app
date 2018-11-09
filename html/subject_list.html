@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>课程列表</title>
+    <link href="../css/public_css/mui.min.css" rel="stylesheet" />
+    <link href="../css/subject_list.css" rel="stylesheet" />
+    <script>
+        var now = new Date().getTime();
+        document.write('<script language="javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/jquery-2.0.3.min.js?t=' + now + '"><\/script\>');
+    </script>
+    <script type="text/javascript" src="../js/public_js/public.js"></script>
+    <script type="text/javascript" src="../js/public_js/login_public_750.js"></script>
+    <script type="text/javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/vue.min.js"></script>
+    <script type="text/javascript" src="../js/public_js/mui.min.js"></script>
+    <script>
+        mui.init();
+    </script>
+    <!--<script src="https://cdnm3.17shanyuan.com/static/js/debug/eruda.js"></script>-->
+    <!--<script>eruda.init();</script>-->
+</head>
+<body>
+    <div id="main" class="mui-content">
+
+        <div class="subject_title">报名总人数：<span class="subject_title_num">{{ total }}</span>人<span style="margin-left:0.26rem">未签到人数：</span><span class="subject_title_num">{{ notSigned }}</span>人</div>
+
+        <div class="subject_content">
+            <div class="list" v-for="(item,index) in listData" :key="index">
+                <div class="list_top">
+                    <div class="top_num">{{ item.number }}</div>
+                    <div class="top_name">{{ item.userName }}</div>
+                    <div class="top_phone">{{ item.mobile }}</div>
+                </div>
+                <div class="list_bottom">
+                    <div class="bottom_time">报名时间：{{ item.applyTimestamp }}</div>
+                    <div class="bottom_status" :class="{ 'refunded': item.applyStatus == 2, 'signed_in': item.applyStatus == 1 }">{{ item.applyText }}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="more" @click="isMore && showMore()">{{ more }}</div>
+    </div>
+<script type="text/javascript" src="../js/subject_list.js"></script>
+</body>
+</html>
