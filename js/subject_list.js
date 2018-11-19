@@ -4,8 +4,8 @@
 var vm = new Vue({
     el: '#main',
     data: {
-        total: 1000,
-        notSigned: 2,
+        total: undefined,
+        notSigned: undefined,
         more:'点击加载更多',
         listData:[],
         page: 0,

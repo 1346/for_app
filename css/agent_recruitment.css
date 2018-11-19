@@ -1,3 +1,177 @@
+body {
+  margin: 0; }
 
+body, .mui-content {
+  background-color: #ffffff; }
+
+.agent_banner {
+  width: 100%;
+  height: 4.46rem; }
+  .agent_banner img {
+    width: inherit;
+    height: inherit; }
+
+.agent_txt {
+  padding: .52rem .45rem .8rem .55rem;
+  font-size: 0.28rem;
+  color: #323232;
+  line-height: 0.37rem; }
+
+.agent_claim {
+  padding-left: 0.57rem;
+  margin-bottom: 0.8rem; }
+
+.agent_title {
+  color: #cead59;
+  font-size: 0.38rem;
+  font-weight: bold;
+  height: 0.38rem;
+  line-height: 1;
+  margin-bottom: 0.34rem; }
+  .agent_title:before {
+    content: '';
+    width: 0.12rem;
+    height: 0.32rem;
+    background-color: #cead59;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 0.2rem; }
+
+.agent_claim_content {
+  font-size: 0.28rem;
+  height: 0.28rem;
+  line-height: 1;
+  color: #323232;
+  margin-bottom: 0.2rem;
+  font-weight: bold; }
+  .agent_claim_content span {
+    display: inline-block;
+    width: 0.07rem;
+    height: 0.07rem;
+    border-radius: 50%;
+    background-color: #323232;
+    margin-right: 0.23rem;
+    vertical-align: top;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+
+.agent_get {
+  font-size: 0.28rem;
+  color: #323232;
+  line-height: 1.375;
+  padding-right: 0.5rem; }
+
+.agent_form {
+  padding: 0 0.46rem;
+  margin-bottom: 1rem; }
+  .agent_form .agent_title {
+    margin-left: 0.09rem; }
+
+.mui-input-group:before, .mui-input-group:after {
+  content: none; }
+.mui-input-group .mui-input-row:after {
+  content: none; }
+
+::-webkit-input-placeholder {
+  color: #979797; }
+
+:-moz-placeholder {
+  color: #979797; }
+
+::-moz-placeholder {
+  color: #979797; }
+
+:-ms-input-placeholder {
+  color: #979797; }
+
+.mui-input-row {
+  height: 0.9rem !important;
+  margin-bottom: 0.17rem; }
+  .mui-input-row label {
+    padding: 0 0 0 0.35rem !important;
+    line-height: 0.9rem;
+    font-size: 0.28rem;
+    border-radius: 0.12rem 0 0 0.12rem;
+    background-color: #f4f4f4;
+    width: 32.8% !important; }
+    .mui-input-row label span {
+      display: inline-block;
+      color: #e67977;
+      margin-right: 0.12rem;
+      vertical-align: middle; }
+  .mui-input-row input {
+    font-size: 0.28rem;
+    width: 67.2% !important;
+    height: 0.9rem !important;
+    background-color: #f4f4f4 !important;
+    padding-right: 0.5rem !important;
+    overflow-x: scroll;
+    position: absolute;
+    border-radius: 0 0.12rem 0.12rem 0; }
+    .mui-input-row input:focus {
+      width: 59.2% !important;
+      border-radius: 0;
+      padding-right: 0 !important; }
+      .mui-input-row input:focus .input_after {
+        display: none; }
+  .mui-input-row .input_after {
+    width: 8%;
+    height: 0.9rem;
+    background-color: #f4f4f4;
+    position: absolute;
+    right: 0;
+    pointer-events: none;
+    border-radius: 0 0.12rem 0.12rem 0; }
+
+.mui-input-row .mui-input-clear ~ .mui-icon-clear, .mui-input-row .mui-input-password ~ .mui-icon-eye, .mui-input-row .mui-input-speech ~ .mui-icon-speech {
+  width: 0.55rem !important;
+  height: 0.9rem !important;
+  top: 50% !important;
+  transform: translateY(-50%);
+  font-size: 0.4rem;
+  z-index: 1; }
+  .mui-input-row .mui-input-clear ~ .mui-icon-clear:before, .mui-input-row .mui-input-password ~ .mui-icon-eye:before, .mui-input-row .mui-input-speech ~ .mui-icon-speech:before {
+    content: '';
+    width: 0.28rem;
+    height: 0.28rem;
+    background: url("../images/close.png") no-repeat center;
+    background-size: 100%;
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.agent_advantage {
+  height: 3.38rem !important;
+  margin-bottom: 0.34rem !important; }
+  .agent_advantage label {
+    width: 100% !important;
+    line-height: 1 !important;
+    padding-top: 0.28rem !important;
+    padding-bottom: 0.24rem !important;
+    border-radius: 0.12rem 0.12rem 0 0; }
+  .agent_advantage textarea {
+    width: 100% !important;
+    padding: 0 0.34rem 0 0.57rem !important;
+    background-color: #f4f4f4 !important;
+    height: 2.55rem !important;
+    border-radius: 0 0 0.12rem 0.12rem;
+    font-size: 0.28rem;
+    line-height: 1.348; }
+
+.mui-btn {
+  width: 100%;
+  border: none;
+  height: 0.88rem;
+  font-size: 0.3rem;
+  color: #ffffff;
+  background-color: #ceac5b;
+  padding: 0;
+  line-height: 0.88rem;
+  border-radius: 0.12rem; }
 
 /*# sourceMappingURL=agent_recruitment.css.map */
