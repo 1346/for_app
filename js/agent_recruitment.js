@@ -30,7 +30,10 @@ var vm = new Vue({
                             vm.loading = false;
                             vm.btnTxt = '提交';
                             const data = json.data;
-                            mui.toast('提交成功', { duration: 'long', type: 'div' })
+                            mui.toast('提交成功', { duration: 'long', type: 'div' });
+                            setTimeout(function() {
+                                window.location.href = window.location.origin + '/h5/Htxq/ApplyTable/Authoritative.html'
+                            },1500)
                         } else {
                             mui.toast(data.text, { duration: 'long', type: 'div' })
                         }
