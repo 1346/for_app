@@ -9,7 +9,53 @@ var vm = new Vue({
         more:'点击加载更多',
         listData:[],
         page: 0,
-        isMore: true
+        isMore: true,
+        list: [
+            {
+                "number": 5,
+                "userName": "男哥",
+                "applyTimestamp": "2018-10-01(拼团)",
+                "applyText": "未签到",
+                "applyStatus": 0,
+                "mobile": "19000000000",
+                specOneTitle: '规格1：',
+                specOneName: '2018.12.30 ~ 2020.02.08一节课',
+                specTwoTitle: '规格2：',
+                specTwoName: '2018.12.30 ~ 2020.02.08一节课',
+            },
+            {
+                "number": 4,
+                "userName": "大花儿",
+                "applyTimestamp": "2018-10-01(拼团)",
+                "applyText": "未签到",
+                "applyStatus": 0,
+                "mobile": "19000000001"
+            },
+            {
+                "number": 3,
+                "userName": "阿迪",
+                "applyTimestamp": "2018-10-01(拼团)",
+                "applyText": "未签到",
+                "applyStatus": 0,
+                "mobile": "19000000002"
+            },
+            {
+                "number": 2,
+                "userName": "阿淼",
+                "applyTimestamp": "2018-10-01(拼团)",
+                "applyText": "未签到",
+                "applyStatus": 0,
+                "mobile": "19000000003"
+            },
+            {
+                "number": 1,
+                "userName": "嘉宁",
+                "applyTimestamp": "2018-10-01(拼团)",
+                "applyText": "未签到",
+                "applyStatus": 0,
+                "mobile": "19000000004"
+            }
+        ]
     },
     created: function() {
         this.getList();

@@ -1,6 +1,10 @@
 body {
   background-color:#f4f4f4;
 }
+@font-face {
+  font-family: "lantingxihei";
+  src: url(https://htxq.oss-cn-beijing.aliyuncs.com/resources/font/FZLTXHJT.ttf);
+}
 .mui-content {
   padding:0 0.3rem;
   background-color:#f4f4f4;
@@ -17,11 +21,11 @@ body {
 }
 .subject_content {
   .list {
-    padding:0.27rem 0.26rem;
+    padding:0.28rem 0.26rem;
     background-color:#ffffff;
     border-radius:0.06rem;
     width:100%;
-    height:1.28rem;
+    //height:1.28rem;
     margin-bottom:0.24rem;
     .list_top {
       position:relative;
@@ -47,6 +51,7 @@ body {
     .list_bottom {
       position:relative;
       height:0.24rem;
+      margin-bottom: .17rem;
       div {
         position:absolute;
         font-size:0.24rem;
@@ -58,6 +63,25 @@ body {
       .bottom_status {
         color:#eb2c2c;
         right:0;
+      }
+    }
+    .list_footer {
+      line-height: 0.24rem;
+      .footer_norm {
+        display: inline-block;
+        font-size: 0.24rem;
+        line-height: 1;
+        color: #323232;
+        span {
+          display: inline-block;
+        }
+        .norm_title {
+          color: #8a8a8a;
+          vertical-align: top;
+        }
+      }
+      .ml40 {
+        margin-left: 0.4rem;
       }
     }
   }

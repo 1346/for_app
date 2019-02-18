@@ -11,7 +11,7 @@
         var now = new Date().getTime();
         document.write('<script language="javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/jquery-2.0.3.min.js?t=' + now + '"><\/script\>');
     </script>
-    <script type="text/javascript" src="../js/public_js/public.js"></script>
+    <script type="text/javascript" src="../../htxq-institute/ApplyTable/js/public.js"></script>
     <script type="text/javascript" src="../js/public_js/login_public_750.js"></script>
     <script type="text/javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/vue.min.js"></script>
     <script type="text/javascript" src="../js/public_js/mui.min.js"></script>
@@ -36,6 +36,17 @@
                 <div class="list_bottom">
                     <div class="bottom_time">报名时间：{{ item.applyTimestamp }}</div>
                     <div class="bottom_status" :class="{ 'refunded': item.applyStatus == 2, 'signed_in': item.applyStatus == 1 }">{{ item.applyText }}</div>
+                </div>
+                <div class="list_footer">
+                    <div class="footer_norm" v-if="item.specOneName">
+                        <span class="norm_title">{{ item.specOneTitle ? item.specOneTitle : '规格1：' }}</span>
+                        {{ item.specOneName }}
+                    </div>
+                    <span style="width: 0.4rem;display: inline-block;"></span>
+                    <div class="footer_norm" v-if="item.specTwoName">
+                        <span class="norm_title">{{ item.specTwoTitle ? item.specTwoTitle : '规格2：' }}</span>
+                        {{ item.specTwoName }}
+                    </div>
                 </div>
             </div>
         </div>
