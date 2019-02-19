@@ -58,7 +58,8 @@ body {
       display: inline-block;
       font-size: 0.24rem;
       line-height: 1;
-      color: #323232; }
+      color: #323232;
+      word-break: break-all; }
       .subject_content .list .list_footer .footer_norm span {
         display: inline-block; }
       .subject_content .list .list_footer .footer_norm .norm_title {

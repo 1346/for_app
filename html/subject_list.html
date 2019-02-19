@@ -39,12 +39,12 @@
                 </div>
                 <div class="list_footer">
                     <div class="footer_norm" v-if="item.specOneName">
-                        <span class="norm_title">{{ item.specOneTitle ? item.specOneTitle : '规格1：' }}</span>
+                        <span class="norm_title">{{ item.specOneTitle ? item.specOneTitle+'：' : '规格1：' }}</span>
                         {{ item.specOneName }}
                     </div>
                     <span style="width: 0.4rem;display: inline-block;"></span>
                     <div class="footer_norm" v-if="item.specTwoName">
-                        <span class="norm_title">{{ item.specTwoTitle ? item.specTwoTitle : '规格2：' }}</span>
+                        <span class="norm_title">{{ item.specTwoTitle ? item.specTwoTitle+'：' : '规格2：' }}</span>
                         {{ item.specTwoName }}
                     </div>
                 </div>

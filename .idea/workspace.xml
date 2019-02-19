@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cba96e7-6317-4e17-a7de-7bb429e97630" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.sass-cache/9d1df73d1f4d090605c93751ec1fc9db91ba8e72/subject_list.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/9d1df73d1f4d090605c93751ec1fc9db91ba8e72/subject_list.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/subject_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/subject_list.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/subject_list.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/subject_list.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/agent_recruitment.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/agent_recruitment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/subject_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/subject_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/public_js/public.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/public_js/public.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/subject_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/subject_list.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/subject_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/subject_list.scss" afterDir="false" />
     </list>
     <ignored path="for_app.iws" />
@@ -31,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/agent_recruitment.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+            <state relative-caret-position="440">
+              <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -40,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/subject_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
+            <state relative-caret-position="396">
+              <caret line="45" column="69" lean-forward="true" selection-start-line="45" selection-start-column="69" selection-end-line="45" selection-end-column="69" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -52,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/subject_list.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
+            <state relative-caret-position="294">
+              <caret line="74" column="30" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -92,8 +89,8 @@
         <option value="$PROJECT_DIR$/js/agent_recruitment.js" />
         <option value="$PROJECT_DIR$/js/public_js/public.js" />
         <option value="$PROJECT_DIR$/html/agent_recruitment.html" />
-        <option value="$PROJECT_DIR$/scss/subject_list.scss" />
         <option value="$PROJECT_DIR$/js/subject_list.js" />
+        <option value="$PROJECT_DIR$/scss/subject_list.scss" />
         <option value="$PROJECT_DIR$/html/subject_list.html" />
       </list>
     </option>
@@ -214,18 +211,17 @@
       <workItem from="1548646770745" duration="1257000" />
       <workItem from="1550038203009" duration="3795000" />
       <workItem from="1550120366976" duration="9279000" />
-      <workItem from="1550474928829" duration="5573000" />
+      <workItem from="1550474928829" duration="7952000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37365000" />
+    <option name="totallyTimeSpent" value="39744000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48767418" visible="true" weight="0.16227607" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48767418" visible="true" weight="0.16227607" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5123258" side_tool="true" weight="0.24920969" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -238,7 +234,7 @@
       <window_info anchor="bottom" id="找到" order="7" weight="0.32900432" />
       <window_info anchor="bottom" id="运行" order="8" />
       <window_info anchor="bottom" id="版本控制" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32296136" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32296136" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32900432" />
       <window_info anchor="bottom" id="调试" order="12" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
@@ -318,24 +314,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/agent_recruitment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/subject_list.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/subject_list.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -346,10 +328,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/html/agent_recruitment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/subject_list.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="74" column="30" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/html/subject_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
+        <state relative-caret-position="396">
+          <caret line="45" column="69" lean-forward="true" selection-start-line="45" selection-start-column="69" selection-end-line="45" selection-end-column="69" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
