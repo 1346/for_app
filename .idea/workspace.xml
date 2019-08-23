@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cba96e7-6317-4e17-a7de-7bb429e97630" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/html/1449730130768010178.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/privacy_protocol.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/use_agreement.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/9d1df73d1f4d090605c93751ec1fc9db91ba8e72/subject_list.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/9d1df73d1f4d090605c93751ec1fc9db91ba8e72/subject_list.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/subject_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/subject_list.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/subject_list.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/subject_list.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/subject_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/subject_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/subject_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/subject_list.scss" afterDir="false" />
     </list>
     <ignored path="for_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,41 +23,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/agent_recruitment.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/html/subject_list.html">
+        <entry file="file://$PROJECT_DIR$/html/privacy_protocol.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="45" column="69" lean-forward="true" selection-start-line="45" selection-start-column="69" selection-end-line="45" selection-end-column="69" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="1159">
+              <caret line="64" lean-forward="true" selection-end-line="247" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/subject_list.scss">
+        <entry file="file://$PROJECT_DIR$/html/use_agreement.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="74" column="30" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/subject_list.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+            <state relative-caret-position="114">
+              <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="18" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -74,6 +51,16 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>click</find>
+      <find>信用分</find>
+      <find>花田小憩研究社</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>花田小憩</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -92,13 +79,16 @@
         <option value="$PROJECT_DIR$/js/subject_list.js" />
         <option value="$PROJECT_DIR$/scss/subject_list.scss" />
         <option value="$PROJECT_DIR$/html/subject_list.html" />
+        <option value="$PROJECT_DIR$/html/use_agreement.html" />
+        <option value="$PROJECT_DIR$/html/privacy_protocol.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="width" value="1924" />
-    <option name="height" value="1057" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -123,11 +113,6 @@
               <item name="for_app" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="for_app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="for_app" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -135,28 +120,35 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\node.js\node.exe" />
-    <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/html" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\new_z\github\for_app\html" />
+      <recent name="E:\github\for_app\js" />
+      <recent name="D:\github\for_app\images" />
+      <recent name="D:\github\for_app\js" />
+      <recent name="D:\github\for_app" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\github\for_app\js\public_js" />
       <recent name="D:\github\for_app\css\public_css" />
       <recent name="D:\github\for_app\js\public_js" />
       <recent name="D:\github\for_app\js" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\github\for_app\js" />
-      <recent name="D:\github\for_app\images" />
-      <recent name="D:\github\for_app\js" />
-      <recent name="D:\github\for_app" />
-      <recent name="D:\github\for_app\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -211,19 +203,33 @@
       <workItem from="1548646770745" duration="1257000" />
       <workItem from="1550038203009" duration="3795000" />
       <workItem from="1550120366976" duration="9279000" />
-      <workItem from="1550474928829" duration="7952000" />
+      <workItem from="1550474928829" duration="10864000" />
+      <workItem from="1553141105531" duration="609000" />
+      <workItem from="1557302603546" duration="5000" />
+      <workItem from="1558343038172" duration="12000" />
+      <workItem from="1558437327739" duration="1660000" />
+      <workItem from="1558581738041" duration="597000" />
+      <workItem from="1558589064494" duration="3121000" />
+      <workItem from="1559187304613" duration="328000" />
+      <workItem from="1559188320049" duration="598000" />
+      <workItem from="1559195728468" duration="1205000" />
+      <workItem from="1559218844552" duration="4000" />
+      <workItem from="1562045956283" duration="23000" />
+      <workItem from="1562224429171" duration="9000" />
+      <workItem from="1565080090730" duration="3193000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39744000" />
+    <option name="totallyTimeSpent" value="54020000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1066" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48767418" visible="true" weight="0.16227607" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48422712" visible="true" weight="0.079557426" />
       <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" sideWeight="0.5123258" side_tool="true" weight="0.24920969" />
+      <window_info id="Favorites" order="2" sideWeight="0.5157729" side_tool="true" weight="0.079557426" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -234,7 +240,7 @@
       <window_info anchor="bottom" id="找到" order="7" weight="0.32900432" />
       <window_info anchor="bottom" id="运行" order="8" />
       <window_info anchor="bottom" id="版本控制" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32296136" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3197425" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32900432" />
       <window_info anchor="bottom" id="调试" order="12" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
@@ -286,24 +292,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/public_js/public.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" selection-start-line="11" selection-end-line="12" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/public_js/login_public_750.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="539">
           <caret line="392" column="32" selection-start-line="392" selection-start-column="27" selection-end-line="392" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/agent_recruitment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="84" selection-start-line="22" selection-start-column="74" selection-end-line="22" selection-end-column="84" />
         </state>
       </provider>
     </entry>
@@ -314,13 +306,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/subject_list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/subject_list.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -328,27 +313,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/agent_recruitment.html">
+    <entry file="file://$PROJECT_DIR$/html/subject_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        <state relative-caret-position="380">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="21" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/subject_list.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
+        <state relative-caret-position="1406">
           <caret line="74" column="30" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/subject_list.html">
+    <entry file="file://$PROJECT_DIR$/js/subject_list.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="45" column="69" lean-forward="true" selection-start-line="45" selection-start-column="69" selection-end-line="45" selection-end-column="69" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="342">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/public_js/public.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" selection-start-line="11" selection-end-line="12" selection-end-column="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/agent_recruitment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/agent_recruitment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/use_agreement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/privacy_protocol.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1159">
+          <caret line="64" lean-forward="true" selection-end-line="247" />
         </state>
       </provider>
     </entry>
