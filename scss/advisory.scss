@@ -1,0 +1,100 @@
+body {
+  padding: 0.35rem 0.35rem 0;
+  text-align: center;
+  margin: 0;
+}
+
+.advisory_card {
+  width:  100%;
+  //height: 6.4rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 -2px 19px rgba(0, 0, 0, 0.08);
+  font-size: 0;
+  font-family: "Helvetica";
+  padding-bottom: 0.76rem;
+  .card_avatar {
+    padding-top: 0.76rem;
+    img {
+      width: 1.64rem;
+      height: 1.64rem;
+      border-radius: 50%;
+    }
+  }
+  .card_name {
+    font-size: 0.32rem;
+    color: #323232;
+    line-height: 0.45rem;
+    font-weight: bold;
+    margin-top: 0.22rem;
+  }
+  .card_phone {
+    margin-top: 0.58rem;
+    .phone_title {
+      font-size: 0.26rem;
+      color: #979797;
+    }
+    .phone_number {
+      margin-top: 0.12rem;
+      font-size: 0.28rem;
+      color: #5a5a5a;
+      height: 0.48rem;
+      span {
+        display: inline-block;
+        line-height: 0.48rem;
+        vertical-align: top;
+      }
+      a {
+        width: 0.48rem;
+        height: 0.48rem;
+        vertical-align: top;
+        margin-left: 0.07rem;
+        display: inline-block;
+        &:focus {
+          outline: none;
+        }
+        &:active {
+          color: transparent;
+        }
+      }
+      img {
+        width: inherit;
+        height: inherit;
+      }
+    }
+  }
+  .card_weChat {
+    margin-top: 0.42rem;
+    .weChat_title {
+      font-size: 0.26rem;
+      color: #979797;
+    }
+    .weChat_number {
+      margin-top: 0.12rem;
+      font-size: 0.28rem;
+      color: #5a5a5a;
+    }
+  }
+  .card_workTime {
+    margin-top: 0.42rem;
+    .workTime_title {
+      font-size: 0.26rem;
+      color: #979797;
+    }
+    .workTime_number {
+      margin-top: 0.12rem;
+      font-size: 0.28rem;
+      color: #5a5a5a;
+    }
+  }
+}
+
+.advisory_footer {
+  font-size: 0.24rem;
+  color: #777777;
+  position: absolute;
+  bottom: 0.87rem;
+  left: 50%;
+  transform: translateX(-50%);
+}

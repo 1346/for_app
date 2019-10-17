@@ -1,0 +1,467 @@
+@charset "utf-8";
+body {
+  background-color: #fff;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.dib {
+  display: inline-block;
+}
+//头部
+.station_header {
+  padding: 0.4rem 0.52rem 0;
+  box-sizing: border-box;
+  height: 2.92rem;
+  position: relative;
+  .header_name {
+    font-size: 0.44rem;
+    line-height: 1;
+    color: #323232;
+    font-weight: bold;
+    margin-top: 0.17rem;
+    max-width: 5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .header_avatar {
+    width: 1.2rem;
+    height: 1.2rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    img {
+      width: inherit;
+      height: inherit;
+      -webkit-border-radius: inherit;
+      -moz-border-radius: inherit;
+      border-radius: inherit;
+    }
+  }
+  .header_bottom {
+    position: absolute;
+    bottom: 0.52rem;
+    width: 6.46rem;
+    .bottom_like {
+      text-align: center;
+      .like_num {
+        font-size: 0.32rem;
+        color: #323232;
+        font-weight: bold;
+        line-height: 0.45rem;
+      }
+      .like_txt {
+        font-size: 0.22rem;
+        color: #777777;
+        line-height: 1;
+        margin-top: 0.03rem;
+      }
+    }
+    .bottom_btn {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      button {
+        font-size: 0.26rem;
+        color: #ffffff;
+        background-color: #c7a282;
+        border-radius: 50px;
+        height: 0.54rem;
+        width: 1.2rem;
+        line-height: 0.54rem;
+        border: 1px solid #c7a282;
+        padding: 0;
+      }
+    }
+    .like_btn {
+      background-color: #fff !important;
+      border: 1px solid #979797 !important;
+      color: #979797 !important;
+    }
+  }
+}
+//tab切换部分
+.station_nav_menu {
+  width: 100%;
+  height: 0.9rem;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  line-height: 0.9rem;
+  text-align: center;
+  box-sizing: border-box;
+  .menu_view {
+    font-size: 0.3rem;
+    color: #979797;
+    margin-left: 0.88rem;
+    position: relative;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .active {
+    color: #323232;
+    font-weight: bold;
+    &::before {
+      content: '';
+      width: 0.56rem;
+      height: 0.04rem;
+      background-color: #323232;
+      position: absolute;
+      bottom: 0.04rem;
+    }
+  }
+}
+//帖子部分
+.station_content {
+  margin-top: 0.3rem;
+  .content_empty {
+    margin-top: 2.32rem;
+    color: #979797;
+    font-size: 0.26rem;
+    text-align: center;
+  }
+  .content_post {
+    padding: 0 0.3rem;
+    .post_header {
+      width: 100%;
+      height: 0.66rem;
+      margin-bottom: 0.3rem;
+      img {
+        width: 0.66rem;
+        height: 0.66rem;
+        vertical-align: top;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+      }
+      span {
+        display: inline-block;
+        font-size: 0.3rem;
+        color: #323232;
+        font-weight: bold;
+        line-height: 0.66rem;
+        vertical-align: top;
+        margin-left: 0.2rem;
+      }
+    }
+    .post_list {
+      margin-bottom: 0.3rem;
+      padding-top: 0.3rem;
+      position: relative;
+      &:first-child {
+        padding-top: 0;
+      }
+      &:after {
+        content: '';
+        width: 7.5rem;
+        height: 1px;
+        background-color: #ececec;
+        position: absolute;
+        left: -0.3rem;
+        bottom: -0.3rem;
+      }
+      .mui-slider {
+        height: 7.3rem;
+      }
+      .mui-slider .mui-slider-group {
+        height: 6.9rem;
+      }
+      .mui-slider .mui-slider-group .mui-slider-item img {
+        height: inherit;
+      }
+      .mui-slider-indicator {
+        height: 0.32rem;
+        bottom: 0.16rem;
+        .mui-indicator {
+          width: 0.13rem;
+          height: 0.13rem;
+          margin: 0 0.05rem;
+          box-shadow: none;
+          background-color: #e6e6e6;
+        }
+        .mui-active {
+          background-color: #cea27c;
+        }
+      }
+      .post_mun {
+        position: absolute;
+        top: 0.28rem;
+        right: 0.24rem;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #ffffff;
+        font-size: 0.26rem;
+        padding: 0 0.16rem;
+        line-height: 0.42rem;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+      }
+      .post_content {
+        margin-top: 0.22rem;
+        font-size: 0.3rem;
+        color: #323232;
+        line-height: 0.4rem;
+        word-break: break-all;
+      }
+      .post_total {
+        margin-top: 0.16rem;
+        margin-bottom: 0.06rem;
+        font-size: 0.24rem;
+        color: #878787;
+        font-weight: bold;
+      }
+      .post_comment {
+        margin-top: 0.06rem;
+        font-size: 0;
+        color: #323232;
+        line-height: 1.2;
+        display: flex;
+        max-width: 6.9rem;
+        .comment_user {
+          font-size: 0.26rem;
+          font-weight: bold;
+          flex-shrink: 0;
+        }
+        .comment_toUser {
+          font-size: 0.26rem;
+          color: #a78b72;
+          flex-shrink: 0;
+        }
+        .comment_detail {
+          font-size: 0.26rem;
+          overflow: hidden;
+          -ms-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+      .post_input {
+        height: 0.66rem;
+        margin-top: 0.3rem;
+        font-size: 0;
+        .input_btn {
+          height: inherit;
+          background-color: #f6f6f6;
+          border: 1px solid #f0f0f0;
+          border-radius: 50px;
+          padding: 0 0.3rem;
+          line-height: 0.66rem;
+          width: 78%;
+          color: #777777;
+          font-size: 0.26rem;
+        }
+        .post_awesome {
+          width: 22%;
+          padding-left: 0.36rem;
+          img {
+            width: 0.62rem;
+            height: 0.66rem;
+            vertical-align: top;
+          }
+          span {
+            margin-left: 0.03rem;
+            margin-right: 0.06rem;
+            font-weight: bold;
+            font-size: 0.22rem;
+            color: #323232;
+            display: inline-block;
+            line-height: 0.66rem;
+            vertical-align: top;
+          }
+        }
+      }
+    }
+  }
+}
+//评论输入区
+.comment_input_area {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transition: all 0.35s;
+  .area_header {
+    height: 1rem;
+    background-color: #f4f4f4;
+    .header_cancel {
+      width: 20%;
+      color: #979797;
+      text-align: center;
+      line-height: 1rem;
+      font-size: 0.26rem;
+    }
+    .header_title {
+      width: 60%;
+      color: #979797;
+      font-size: 0.34rem;
+      line-height: 1rem;
+      text-align: center;
+    }
+    .header_send {
+      width: 20%;
+      text-align: center;
+      height: inherit;
+      span {
+        display: inline-block;
+        background-color: #323232;
+        color: #ffffff;
+        font-size: 0.26rem;
+        padding: 0.05rem 0.3rem;
+        -webkit-border-radius: 0.06rem;
+        -moz-border-radius: 0.06rem;
+        border-radius: 0.06rem;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  .area_input {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    font-size: 0.26rem;
+    color: #323232;
+    padding: 0.18rem 0.24rem;
+  }
+}
+//显示出评论输入区
+.show_area {
+  left: 0;
+}
+//打开浏览器查看的蒙层
+.open_browser {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+//图册部分
+.atlas_list {
+  margin-top: 0.22rem;
+  margin-bottom: 0.22rem;
+  padding: 0 0.22rem;
+  font-size: 0;
+  line-height: 1;
+  img {
+    width: 2.3rem;
+    height: 2.3rem;
+    margin-right: 0.08rem;
+    margin-top: 0.08rem;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+//图册点击查看大图轮播部分
+.atlas_mask {
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  .mask_close {
+    position: absolute;
+    top: 0.8rem;
+    right: 0.5rem;
+    width: 0.52rem;
+    height: 0.52rem;
+    z-index: 99;
+  }
+  .mask_slider {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    .mui-slider-item {
+      vertical-align: middle;
+    }
+  }
+}
+//活动部分
+.activity_list {
+  padding: 0 0.3rem;
+  .list_content {
+    border-bottom: 1px solid #dcdcdc;
+    margin-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    &:first-child {
+      margin-top: 0;
+    }
+    .content_img {
+      width: 2.03rem;
+      height: 2.7rem;
+      -webkit-border-radius: 0.14rem;
+      -moz-border-radius: 0.14rem;
+      border-radius: 0.14rem;
+      position: relative;
+      margin-right: 0.28rem;
+      vertical-align: top;
+      img {
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+      }
+      .content_score {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.88);
+        font-weight: bold;
+        font-size: 0.26rem;
+        color: #f2c49d;
+        padding: 0 0.17rem;
+        line-height: 0.4rem;
+        border-radius: 0.14rem 0;
+      }
+    }
+    .content_detail {
+      max-width: 4.59rem;
+      padding-top: 0.14rem;
+      vertical-align: top;
+      .detail_title {
+        color: #323232;
+        font-size: 0.3rem;
+        font-weight: bold;
+      }
+      .detail_teacher {
+        color: #777777;
+        font-size: 0.26rem;
+        margin-top: 0.18rem;
+      }
+      .detail_time {
+        @extend .detail_teacher;
+        span {
+          display: inline-block;
+        }
+        .detail_city {
+          margin-left: 0.2rem;
+        }
+      }
+      .detail_price {
+        color: #b59b86;
+        font-size: 0.26rem;
+        margin-top: 0.26rem;
+      }
+    }
+  }
+}
+.footer {
+  text-align: center;
+  padding: 0.3rem 0;
+  font-size: 0.28rem;
+  color: #777;
+}
+[v-cloak] {
+  display: none;
+}

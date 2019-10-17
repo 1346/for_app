@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文章详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="format-detection"content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <script>
+        var now = new Date().getTime();
+        document.write('<script language="javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/jquery-2.0.3.min.js?t=' + now + '"><\/script\>');
+        document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5 + "px";
+        window.onresize = function(){ document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5 + "px" }
+    </script>
+    <script type="text/javascript" src="../js/public_js/login_public_750.js"></script>
+    <script type="text/javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/vue.min.js"></script>
+    <link rel="stylesheet" href="../css/article_detail.css?t=1568997382401" />
+</head>
+<body>
+<div id="main" v-cloak>
+    <div class="article_header" v-if="isShare">
+        <video
+                x5-playsinline=""
+                x-webkit-airplay="allow"
+                controls=""
+                id='media'
+                :src="detail.videoUrl"
+                width="100%"
+                poster=""
+                @ended="videoEnd"
+                style="height: 8.79rem"
+                v-if="isVideo"
+                preload="auto">
+        </video>
+        <div class="header_video" v-if="isVideo && !isPlay">
+            <img class="video_img" :src="detail.coverImage">
+            <img class="video_play" src="../images/bofang@2x.png" alt="" @click="playVideo">
+        </div>
+        <img class="header_img" :src="detail.coverImage" v-if="!isVideo">
+        <div v-if="!isPlay">
+            <div class="header_content">
+                <div class="content_title">{{ detail.title }}</div>
+                <div class="content_dec">{{ detail.intro }}</div>
+                <div class="content_category">{{ detail.category }}</div>
+            </div>
+            <div class="header_mask">
+                <img src="../images/article_mask.png">
+            </div>
+            <div class="header_footer"></div>
+        </div>
+    </div>
+    <div class="article_shop" v-if="false">
+        <div class="shop_title">苏沐 · 花店</div>
+        <div class="shop_msg">
+            <div class="msg_cell">
+                <div class="cell_label dib">坐标</div>
+                <div class="cell_value dib">锡林浩</div>
+            </div>
+            <div class="msg_cell">
+                <div class="cell_label dib">均价</div>
+                <div class="cell_value dib">￥400</div>
+            </div>
+            <div class="msg_cell">
+                <div class="cell_label dib">店铺设计</div>
+                <div class="cell_value dib">A+</div>
+            </div>
+        </div>
+        <div class="shop_line"></div>
+    </div>
+    <div class="fff" v-if="difficulty !== 0 && curing !== 0 && humidity !== 0">
+        <div class="divDescImage">
+            <div class="pic_left">
+                <div class="pic_number">{{ difficulty }}</div>
+                <div class="pic_sign">%</div>
+                <div class="pic_text">难度系数值</div>
+            </div>
+            <div class="pic_mid">
+                <div class="pic_mid_num">{{ curing }}</div>
+                <div class="pic_text" style="width: .92rem;">养护指数</div>
+            </div>
+            <div class="pic_mid pic_eee">
+                <div class="pic_sign pic_jian">%</div>
+                <div class="pic_number">{{ humidity }}</div>
+                <div class="pic_text">湿度需求值</div>
+            </div>
+        </div>
+    </div>
+    <div class="detail_content">
+        <div v-html="content1"></div>
+        <div v-html="content2"></div>
+        <div v-html="content3"></div>
+    </div>
+    <div class="article_shop_footer" v-if="false">
+        <div class="footer_local">
+            <div class="local_txt">店铺地址：北京市朝阳区高碑店花园里文创园C座1009室</div>
+            <div class="local_navigation">
+                <img src="../images/navigation@2x.png" alt="">
+            </div>
+            <div class="local_phone">
+                <a href="tel:13240486486"><img src="../images/article_phone@2x.png" alt=""></a>
+            </div>
+        </div>
+        <div class="footer_weChat">微信号：htxq.001</div>
+    </div>
+    <div class="footer" v-if="showFooter">*版权归花田小憩所有*</div>
+</div>
+<script type="text/javascript" src="../js/article_detail.js?t=1568997382401"></script>
+</body>
+</html>

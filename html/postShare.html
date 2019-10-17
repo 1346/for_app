@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="format-detection"content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>帖子</title>
+    <link rel="stylesheet" href="../css/public_css/mui.min.css" />
+    <link rel="stylesheet" href="../css/postShare.css" />
+    <script type="text/javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/vue.min.js"></script>
+    <script type="text/javascript" src="../js/public_js/mui.min.js"></script>
+    <script>
+        var now = new Date().getTime();
+        document.write('<script language="javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/jquery-2.0.3.min.js?t=' + now + '"><\/script\>');
+        document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5 + "px";
+        window.onresize = function(){ document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5 + "px" }
+    </script>
+    <script type="text/javascript" src="../js/public_js/login_public_750.js"></script>
+    <!--        <script src="//cdn.bootcss.com/eruda/1.5.2/eruda.min.js"></script>-->
+    <!--        <script>eruda.init();</script>-->
+</head>
+<body>
+<div id="main" v-cloak>
+    <div class="post_detail">
+        <div class="post_header">
+            <img :src="postDetail.customerHead"><!--
+                    --><span>{{ postDetail.customerName }}</span>
+        </div>
+        <div class="mui-slider" @slide="slide">
+            <div class="mui-slider-group">
+                <div class="mui-slider-item" v-for="(imgItem,imgIndex) in postDetail.imageList" :key="imgIndex">
+                    <img :src="imgItem" alt="" />
+                </div>
+            </div>
+            <div class="mui-slider-indicator">
+                <div class="mui-indicator mui-active"></div><!--
+                --><div class="mui-indicator" v-for="(blockItem, blockIndex) in postDetail.imageList.length>1?postDetail.imageList.length-1:0" :key="blockIndex"></div>
+            </div>
+            <div class="post_mun" v-if="postDetail.imageList.length !== 0">{{ postDetail.current }}/{{ postDetail.imageList.length }}</div>
+        </div>
+        <div class="post_content">{{ postDetail.content }}</div>
+        <div class="post_total">{{ postDetail.commentCount }}</div>
+        <div class="post_comment" v-for="(commentItem, commentIndex) in postDetail.commentList" :key="commentIndex">
+            <div class="dib comment_user">{{ commentItem.userName }}：</div>
+            <div class="dib comment_toUser" v-if="commentItem.toUser">@{{ commentItem.toUserName }} </div>
+            <div class="dib comment_detail">{{ commentItem.content }}</div>
+        </div>
+        <div class="post_input mui-clearfix">
+            <div class="fl input_btn" @click="showCommentBox = true">写评论...</div>
+            <div class="fl post_awesome">
+                <div class="dib">
+                    <img src="../images/awesome_ok.png" v-if="postDetail.isLike">
+                    <img src="../images/awesome_null.png" v-else>
+                </div>
+                <span class="dib">{{ postDetail.likeCount }}</span>
+            </div>
+        </div>
+    </div>
+
+    <!--        暂时写一个浏览器打开然后跳转APP的蒙层-->
+    <div class="open_browser" @click="showCommentBox = false" v-if="showCommentBox" >
+        <img src="../images/live_weixin.png">
+    </div>
+</div>
+<script type="text/javascript" src="../js/postShare.js?t=1568997382401"></script>
+<script>
+    mui.init();
+</script>
+</body>
+</html>

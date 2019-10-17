@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="format-detection"content="telephone=no" />
+    <title>个人小站</title>
+    <link rel="stylesheet" href="../css/public_css/mui.min.css" />
+    <link rel="stylesheet" href="../css/stationShare.css" />
+    <script type="text/javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/vue.min.js"></script>
+    <script type="text/javascript" src="../js/public_js/mui.min.js"></script>
+    <script>
+        var now = new Date().getTime();
+        document.write('<script language="javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/jquery-2.0.3.min.js?t=' + now + '"><\/script\>');
+        document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5 + "px";
+        window.onresize = function(){ document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5 + "px" }
+    </script>
+    <script type="text/javascript" src="../js/public_js/login_public_750.js"></script>
+<!--        <script src="//cdn.bootcss.com/eruda/1.5.2/eruda.min.js"></script>-->
+<!--        <script>eruda.init();</script>-->
+</head>
+<body>
+<div id="main" v-cloak>
+<!--    头部信息显示区域-->
+    <div class="station_header">
+        <div class="mui-clearfix">
+            <div class="header_name fl">{{ headerDetail.customerName }}</div>
+            <div class="header_avatar fr">
+                <img :src="headerDetail.customerHead">
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="dib bottom_like">
+                <div class="like_num">{{ headerDetail.follower }}</div>
+                <div class="like_txt">被喜欢</div>
+            </div><!--
+            --><div class="dib bottom_like" style="margin-left: 0.48rem;">
+                <div class="like_num">{{ headerDetail.follow }}</div>
+                <div class="like_txt">喜欢</div>
+            </div>
+            <div class="bottom_btn">
+                <button type="button" :class="{ 'like_btn' : headerDetail.isFollow }" @click="showCommentBox = true">{{ headerDetail.isFollow ? '已关注' : '关注' }}</button>
+            </div>
+        </div>
+    </div>
+
+<!--    导航菜单部分-->
+    <div class="station_nav_menu">
+        <div class="dib menu_view"
+             v-for="item in menuList"
+             :key="item.id" v-if="item.show"
+             :class="{ active: selectId == item.id }"
+             @click="changeMenu(item)"
+        >{{ item.name }}</div>
+    </div>
+
+    <div class="station_content">
+<!--        帖子显示区域-->
+        <div class="content_post" v-show="selectId == 1">
+            <div class="content_empty" v-if="postList.length == 0">还没有内容</div>
+            <div class="post_list" v-for="(item, index) in postList" :key="item" v-else>
+                <div class="post_header">
+                    <img :src="item.customerHead"><!--
+                    --><span>{{ item.customerName }}</span>
+                </div>
+                <div class="mui-slider" @slide="slide($event, item)">
+                    <div class="mui-slider-group">
+                        <div class="mui-slider-item" v-for="(imgItem,imgIndex) in item.imageList" :key="imgIndex">
+                            <img :src="imgItem" alt="" />
+                        </div>
+                    </div>
+                    <div class="mui-slider-indicator">
+                        <div class="mui-indicator mui-active"></div><!--
+                --><div class="mui-indicator" v-for="(blockItem, blockIndex) in item.imageList.length>1?item.imageList.length-1:0" :key="blockIndex"></div>
+                    </div>
+                    <div class="post_mun" v-if="item.imageList.length !== 0">{{ item.current }}/{{ item.imageList.length }}</div>
+                </div>
+                <div class="post_content">{{ item.content }}</div>
+                <div class="post_total">{{ item.commentCount }}</div>
+                <div class="post_comment" v-for="(commentItem, commentIndex) in item.commentList" :key="commentIndex">
+                    <div class="dib comment_user">{{ commentItem.userName }}：</div>
+                    <div class="dib comment_toUser" v-if="commentItem.toUser">@{{ commentItem.toUserName }} </div>
+                    <div class="dib comment_detail">{{ commentItem.content }}</div>
+                </div>
+                <div class="post_input mui-clearfix">
+                    <div class="fl input_btn" @click="showCommentBox = true">写评论...</div>
+                    <div class="fl post_awesome">
+                        <div class="dib">
+                            <img src="../images/awesome_ok.png" v-if="item.isLike">
+                            <img src="../images/awesome_null.png" v-else>
+                        </div>
+                        <span class="dib">{{ item.likeCount }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer" v-if="postCompleted">- 已加载完成 -</div>
+        </div>
+
+<!--        图册显示区域-->
+        <div class="content_atlas" v-if="selectId == 2">
+            <div class="content_empty" v-if="atlasList.length == 0">还没有内容</div>
+            <div class="atlas_list" v-else>
+                <img v-for="(item, index) in atlasList" :src="item" alt="item" @click="clickAtlas(index)">
+            </div>
+            <div class="footer" v-if="atlasCompleted">- 已加载完成 -</div>
+        </div>
+
+<!--        活动显示区域-->
+        <div class="content_activity" v-if="selectId == 3">
+            <div class="content_empty" v-if="activityList.length == 0">还没有内容</div>
+            <div class="activity_list" v-else>
+                <div class="list_content" v-for="(item, index) in activityList" :key="index" @click="jumpToDetail(item)">
+                    <div class="content_img dib">
+                        <img :src="item.coverImage" alt="">
+                        <div class="content_score">{{ item.score }}</div>
+                    </div><!--
+                    --><div class="content_detail dib">
+                        <div class="detail_title">{{ item.title }}</div>
+                        <div class="detail_teacher">讲师：{{ item.teacher }}</div>
+                        <div class="detail_time">
+                            <span>{{ item.beginTimestamp ? item.beginTimestamp : '永不截止' }}</span><!--
+                            --><span class="detail_city">{{ item.city }}</span>
+                        </div>
+                        <div class="detail_price">{{ item.guidePrice }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer" v-if="activityCompleted">- 已加载完成 -</div>
+        </div>
+    </div>
+
+<!--    评论输入-->
+<!--    <div class="comment_input_area" :class="{ show_area: showCommentBox }">-->
+<!--        <div class="area_header mui-clearfix">-->
+<!--            <div class="header_cancel fl" @click="showCommentBox = false">取消</div>-->
+<!--            <div class="header_title fl">发评论</div>-->
+<!--            <div class="header_send fl">-->
+<!--                <span @click="commentSend">发送</span>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <textarea class="area_input" placeholder="说点儿什么吧..." maxlength="140" rows="20" v-model="comment"></textarea>-->
+<!--    </div>-->
+
+<!--        暂时写一个浏览器打开然后跳转APP的蒙层-->
+    <div class="open_browser" @click="showCommentBox = false" v-if="showCommentBox" >
+            <img src="../images/live_weixin.png">
+        </div>
+
+<!--    图册点击打开蒙层滑动-->
+    <div class="atlas_mask" v-if="showAtlasDetail" @touchmove.prevent>
+        <img class="mask_close" src="../images/mask_close.png" alt="" @click="showAtlasDetail = false">
+        <div class="mask_slider">
+            <div class="mui-slider" @slide="atlasSlide">
+                <div class="mui-slider-group">
+                    <div class="mui-slider-item" v-for="(imgItem,imgIndex) in atlasList" :key="imgIndex">
+                        <img :src="imgItem" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/stationShare.js"></script>
+<script>
+    mui.init();
+</script>
+</body>
+</html>

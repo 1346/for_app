@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="format-detection"content="telephone=no" />
+    <title>咨询</title>
+    <link rel="stylesheet" href="../css/advisory.css">
+    <script type="text/javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/vue.min.js"></script>
+    <script>
+        var now = new Date().getTime();
+        document.write('<script language="javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/jquery-2.0.3.min.js?t=' + now + '"><\/script\>');
+        document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5 + "px";
+        window.onresize = function(){ document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5 + "px" }
+    </script>
+    <script type="text/javascript" src="../js/public_js/login_public_750.js"></script>
+</head>
+<body>
+<div id="main">
+<div class="advisory_card">
+    <div class="card_avatar">
+        <img :src="detail.schoolHead">
+    </div>
+    <div class="card_name">{{ detail.schoolName }}</div>
+    <div class="card_phone">
+        <div class="phone_title">联系电话</div>
+        <div class="phone_number">
+            <span>{{ detail.linkTel }}</span><!--
+            --><a :href="'tel:' + detail.linkTel"><img src="../images/phone.png"></a>
+        </div>
+    </div>
+    <div class="card_weChat">
+        <div class="weChat_title">微信</div>
+        <div class="weChat_number">{{ detail.linkWeixin }}</div>
+    </div>
+    <div class="card_workTime" v-if="detail.worktime">
+        <div class="workTime_title">工作时间</div>
+        <div class="workTime_number">{{ detail.worktime }}</div>
+    </div>
+</div>
+<div class="advisory_footer">本活动由花田小憩认证</div>
+</div>
+<script type="text/javascript" src="../js/advisory.js"></script>
+</body>
+</html>
