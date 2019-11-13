@@ -14,8 +14,9 @@
         document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5 + "px";
         window.onresize = function(){ document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5 + "px" }
     </script>
-    <script type="text/javascript" src="../js/public_js/login_public_750.js"></script>
     <script type="text/javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/vue.min.js"></script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+    <script type="text/javascript" src="../js/public_js/login_public_750.js"></script>
     <link rel="stylesheet" href="../css/article_detail.css?t=1568997382401" />
 </head>
 <body>
@@ -104,8 +105,11 @@
         </div>
         <div class="footer_weChat">微信号：htxq.001</div>
     </div>
-    <div class="footer" v-if="showFooter">*版权归花田小憩所有*</div>
+    <div class="footer" :class="{ share_footer: isShare }" v-if="showFooter">*版权归花田小憩所有*</div>
+    <a class="download_app" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.floral.life" v-if="isShare">
+        <img src="../images/download_app.png" @click="" alt="">
+    </a>
 </div>
-<script type="text/javascript" src="../js/article_detail.js?t=1568997382401"></script>
+<script type="text/javascript" src="../js/article_detail.js?t=1573057367050"></script>
 </body>
 </html>

@@ -53,6 +53,13 @@ var vm = new Vue({
                         vm.showFooter = true;
                         vm.detail = json.data;
                         vm.isVideo = json.data.isVideo;
+                        wx.ready(function () {
+                            var title   = json.data.title;
+                            var link = '';
+                            var imgUrl  = json.data.coverImage;
+                            var desc    = json.data.intro;
+                            weixinShare(title,link,imgUrl,desc)
+                        })
                     } else {
                         showWrong(json.text);
                     }

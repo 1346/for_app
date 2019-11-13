@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>信用分</title>
+    <link rel="stylesheet" href="../Credit/css/mui.min.css" />
+    <link rel="stylesheet" href="../Credit/css/index.css" />
+    <script type="text/javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/vue.min.js"></script>
+    <script type="text/javascript" src="../Credit/js/public.js"></script>
+<!--    <script src="//cdn.jsdelivr.net/npm/eruda"></script>-->
+<!--    <script>eruda.init();</script>-->
+    <script>
+        var now = new Date().getTime();
+        document.write('<script language="javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/jquery-2.0.3.min.js?t=' + now + '"><\/script\>');
+    </script>
+    <script type="text/javascript" src="../Credit/js/mui.min.js"></script>
+    <script type="text/javascript" src="../Credit/js/login_public_750.js"></script>
+    <script>
+        mui.init();
+    </script>
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+
+        .header {
+            width: 100%;
+            height: 3.25rem;
+            /*background-color: #e1b95f;*/
+            text-align: center;
+            padding: 0.92rem 0;
+            background:url("../Credit/images/background.png") no-repeat;
+        }
+
+        .null_header {
+            padding: 0.88rem 0;
+        }
+
+        .header-num {
+            color: #786433;
+            font-size: 0.86rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .header-txt {
+            color: #786433;
+            font-size: 0.3rem;
+            line-height: 1;
+            margin-top: 0.28rem;
+        }
+
+        .null_header_txt {
+            margin-top: 0;
+            font-size: 0.28rem;
+            color: #705C2F;
+            line-height: 1.3;
+        }
+
+        .null_btn {
+            width: 1.92rem;
+            height: 0.56rem;
+            background-color: #fff;
+            border-radius: 0.08rem;
+            font-size: 0.3rem;
+            color: #695A38;
+            line-height: 0.56rem;
+            text-align: center;
+            display: block;
+            margin: 0.34rem auto 0;
+        }
+
+        .null_btn:active {
+            color: #695A38;
+        }
+
+        .rules {
+            margin-top: 0.34rem;
+            margin-bottom: 0.24rem;
+            padding: 0 0.3rem;
+        }
+
+        .rules-header {
+            color: #323232;
+            font-size: 0.3rem;
+            font-weight: bold;
+            margin-bottom: 0.24rem;
+        }
+
+        .rules-content {
+            color: #777777;
+            font-size: 0.26rem;
+        }
+
+        .rules-content div {
+            line-height:0.31rem;
+            margin-bottom:0.14rem;
+            font-size:0.26rem;
+        }
+
+        .empty {
+            width: 100%;
+            height: 0.2rem;
+            background-color: #f4f4f4;
+            border-top: 1px solid #dcdcdc;
+            border-bottom: 1px solid #dcdcdc;
+        }
+
+        .detail-list {
+            margin-top: 0.34rem;
+            padding: 0 0.3rem;
+            margin-bottom: 0.24rem;
+        }
+
+        .detail-header {
+            color: #323232;
+            font-size: 0.3rem;
+            font-weight: bold;
+            margin-bottom: 0.24rem;
+        }
+
+        .fr {
+            float: right;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .clearfix:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+        .list {
+            color: #979797;
+            font-size: 0.26rem;
+            line-height: 1;
+            margin-bottom: 0.14rem;
+        }
+        .list-num {
+            color: #cb5353;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="main" v-cloak>
+        <div class="header" :class="{ null_header: score == 0 }">
+            <div v-if="isVerified">
+                <div class="header-num" v-if="score !== 0">{{score}}</div>
+                <div class="header-txt" v-if="score == 12">您当前的信用评分非常好</div>
+                <div class="header-txt" v-if="score == 11 || score == 10">您当前的信用评分良好</div>
+                <div class="header-txt" v-if="score >= 6 && score <= 9">您当前的信用评分一般</div>
+                <div class="header-txt" v-if="score >= 1 && score <= 5">您当前的信用评分较差</div>
+                <div class="header-txt" v-if="score == 0">您已无信用评分可用</div>
+            </div>
+            <div class="header-txt null_header_txt" v-else>
+                <div>你当前的信用评分为{{ score }}</div>
+                <div>开启认证+50学分哦~</div>
+                <div class="null_btn" @click="goApp">开启认证</div>
+            </div>
+        </div>
+        <div class="rules">
+            <div class="rules-header">评分规则</div>
+            <div class="rules-content">
+                <div>1，每个账号实名制后默认信用为12分。</div>
+                <div>2，当您参加线下活动时，每个活动会对应相应的信用分值。当您的信用分低于活动所需分时候，无法报名参加。</div>
+                <div>3，如果您报名的活动因任何个人问题导致无法参加。会扣取您对应的信用分。</div>
+                <div>4，信用分被扣除后无法自然恢复，只有当您守约参加活动时，每次会恢复1-4分，最高不超过12分。</div>
+                <div>5，低于6分信用无法使用平台社员福利功能。</div>
+            </div>
+        </div>
+        <div class="empty"></div>
+        <div class="detail-list">
+            <div class="detail-header">信用扣分明细表</div>
+            <div v-for="(item, index) in detailList" :key="index" class="clearfix list">
+                <span class="fl">{{ item.timestamp }}{{ item.trainTitle }}</span>
+                <span class="fr list-num">{{ item.score }}</span>
+            </div>
+        </div>
+    </section>
+    <script>
+        var vm = new Vue({
+            el: '#main',
+            data: {
+                score: "",
+                detailList: [],
+                isVerified: true,   // 是否已经实名认证
+            },
+            created: function() {
+                this.getList();
+            },
+            methods:{
+              getList:function() {
+                  $.ajax({
+                      url:window.location.origin + '/cactus/customer/getCreditDetail?customerId='+getLocationHrefPara('customerId'),
+                      type: "GET",
+                      dataType: 'json',
+                      data: {},
+                      success: function (data) {
+                          if (data.code == '000000') {
+                              vm.isVerified = data.data.isVerified;
+                              if (data.data.score < 0) {
+                                  vm.score = 0
+                              } else {
+                                  vm.score = data.data.score;
+                              }
+                              if (data.data.list.length > 0) {
+                                  vm.detailList = data.data.list;
+                              } else {
+                                  vm.detailList.push({trainTitle:'暂无扣分记录'})
+                              }
+                          } else {
+                              showWrong(data.text);
+                          }
+                      }
+                  })
+              },
+                goApp() {
+                    if (judegEquipment() == 'ios') {
+                        javaFunction('24', '', '')
+                    } else if (judegEquipment() == 'android') {
+                        window.Android.operation(2)
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

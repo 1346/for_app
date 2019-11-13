@@ -110,6 +110,10 @@
   padding-bottom: 0.7rem;
 }
 
+.share_footer {
+  padding-bottom: 1.9rem;
+}
+
 .detail_content {
   padding: 0.2rem 5% 0.2rem 5%;
   img {
@@ -300,6 +304,16 @@
     padding: 0.24rem 0.22rem 0.24rem 0.32rem;
     font-size: 0.24rem;
     color: #4B4A4A;
+  }
+}
+
+.download_app {
+  position: fixed;
+  bottom: 0;
+  width: 7.5rem;
+  height: 1.2rem;
+  img {
+    width: inherit;
   }
 }
 

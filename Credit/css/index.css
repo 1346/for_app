@@ -1,0 +1,185 @@
+body,.mui-content {
+    background-color:#f4f4f4;
+}
+.mui-input-group .mui-input-row:after {
+    left:0;
+    background-color:#dcdcdc;
+}
+.mui-input-group:after {
+    content:none;
+}
+.real-header {
+    padding:0.26rem 0.3rem;
+    color:#777777;
+    font-size:0.24rem;
+    line-height:0.31rem;
+}
+.real-check {
+    color:#d42020;
+    margin-right:0.1rem;
+    margin-left:0.3rem;
+    display:inline-block;
+    height:0.28rem;
+    font-size:0.28rem;
+    line-height:1;
+}
+.mui-input-group .mui-input-row {
+    height:auto;
+}
+.mui-input-row label {
+    color:#323232;
+    line-height:1;
+    padding:0;
+}
+.mui-input-row {
+    font-size:0.28rem;
+    padding:0.3rem 0;
+}
+.mui-input-row input {
+    line-height:1;
+    color:#323232;
+    padding:0 0.5rem 0 0;
+    height:auto;
+    font-size:0.28rem;
+}
+.mui-icon-clear:before, .mui-icon-close-filled:before {
+    content:none;
+}
+.mui-icon-clear {
+    width:0.34rem !important;
+    height:0.34rem !important;
+    background:url("../images/delete.png") no-repeat;
+    background-size: 0.34rem;
+    margin-right:0.1rem;
+    top: 50% !important;
+    transform: translateY(-50%);
+}
+.real-empty {
+    width:100%;
+    height:0.22rem;
+    background-color:#f4f4f4;
+}
+.real-upload {
+    padding-bottom:0.5rem;
+    padding-top:0.3rem;
+    position:relative;
+}
+.real-upload:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    content: '';
+    transform: scaleY(.5);
+    background-color: #dcdcdc;
+}
+.real-upload:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    content: '';
+    transform: scaleY(.5);
+    background-color: #dcdcdc;
+}
+.real-upload-header {
+    font-size:0.28rem;
+    line-height:1;
+    color:#323232;
+    margin-bottom:0.48rem;
+}
+.real-upload-header-tip {
+    font-size:0.24rem;
+    color:#777777;
+    margin-top:0.14rem;
+    padding-left:0.53rem;
+}
+.real-upload-input {
+    background:url("../images/img.png") no-repeat;
+    background-size:4.1rem 2.48rem;
+    height:2.48rem;
+    width:4.1rem;
+    margin-left:0.53rem;
+    position:relative;
+}
+.real-upload-input input[type='file'] {
+    opacity:0;
+    height:2.48rem;
+    width:4.1rem;
+}
+.upload-image {
+    position:absolute;
+    top:0;
+    width:inherit;
+    height:inherit;
+    border-radius:0.1rem;
+}
+.upload-delete {
+    width: 0.38rem;
+    position: absolute;
+    top: 0.18rem;
+    right: 0.2rem;
+}
+.real-service {
+    padding:0.49rem 0 0.28rem 0.3rem;
+    background-color:#f4f4f4;
+}
+.real-service span {
+    display:inline-block;
+    color:#777777;
+    height:0.3rem;
+    line-height:0.3rem;
+    font-size:0.26rem;
+}
+.checked {
+    width:0.3rem;
+    height:0.3rem;
+    background-size:0.3rem !important;
+    vertical-align:middle;
+    margin-right:0.1rem;
+}
+.is-checked {
+    background:url("../images/checked.png") no-repeat;
+}
+.no-checked {
+    background:url("../images/no-checked.png") no-repeat;
+}
+.real-submit {
+    background-color:#f4f4f4;
+    padding:0 0.3rem;
+}
+.real-submit .mui-btn {
+    color:#635129;
+    font-size:0.3rem;
+    background-color:#dbb867;
+    border:none;
+    border-radius:0.05rem;
+    line-height:1;
+    width:100%;
+    padding:0.3rem 0;
+}
+.real-footer {
+    height:3rem;
+    width:100%;
+}
+.mui-input-group:before {
+    background-color:#dcdcdc;
+}
+input::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #777777;
+}
+input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #777777;
+}
+input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #777777;
+}
+input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #777777;
+}
