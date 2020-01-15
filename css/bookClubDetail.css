@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+#main {
+  padding: 0.3rem 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 0; }
+
+p {
+  margin: 0; }
+
+.fr {
+  float: right; }
+
+.fl {
+  float: left; }
+
+[v-cloak] {
+  display: none; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.book_header {
+  margin-bottom: 0.3rem;
+  padding: 0 0.3rem; }
+  .book_header .header_img {
+    display: inline-block;
+    width: 1.9rem;
+    height: 2.66rem;
+    border-radius: 0.14rem;
+    box-shadow: 0 0.02rem 0.2rem RGBA(0, 0, 0, 0.22);
+    vertical-align: top; }
+    .book_header .header_img img {
+      width: inherit;
+      height: inherit;
+      border-radius: inherit; }
+  .book_header .header_right {
+    margin-left: 0.28rem;
+    vertical-align: top;
+    width: 4.72rem;
+    display: inline-block; }
+    .book_header .header_right .right_title {
+      font-size: 0.34rem;
+      color: #323232;
+      font-weight: bold;
+      line-height: 0.4rem;
+      margin-top: 0.08rem;
+      word-break: break-all;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden; }
+    .book_header .header_right .right_dec {
+      font-size: 0.26rem;
+      color: #777777;
+      line-height: 0.36rem;
+      margin-top: 0.12rem;
+      overflow: hidden;
+      -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+    .book_header .header_right .right_name {
+      font-size: 0.26rem;
+      color: #323232;
+      line-height: 0.36rem;
+      margin-top: 0.3rem; }
+    .book_header .header_right .right_read {
+      font-size: 0.24rem;
+      color: #323232;
+      margin-top: 0.14rem; }
+      .book_header .header_right .right_read img {
+        width: 0.15rem;
+        height: 0.2rem;
+        margin-right: 0.06rem; }
+
+.book_audio {
+  padding: 0.37rem 0.3rem 0.47rem; }
+  .book_audio .progress_box {
+    width: 100%;
+    position: relative; }
+    .book_audio .progress_box .audio_progress {
+      width: calc(100% - 1.18rem - 0.2rem);
+      height: 0.04rem;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      position: relative;
+      background-color: #e3e3e3;
+      margin-left: 0.2rem; }
+      .book_audio .progress_box .audio_progress .progress_ok {
+        background-color: #323232;
+        height: inherit; }
+      .book_audio .progress_box .audio_progress .progress_val {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 0.32rem;
+        line-height: 0.32rem;
+        padding: 0 0.1rem;
+        background-color: #cea27c;
+        color: #3b2817;
+        font-size: 0.18rem;
+        border-radius: 50px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 1.18rem;
+        font-family: "Helvetica";
+        margin-left: -0.2rem; }
+    .book_audio .progress_box .progress_right_null {
+      height: 0.04rem;
+      background-color: #e3e3e3;
+      width: 1.18rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px; }
+    .book_audio .progress_box .progress_left_null {
+      height: 0.04rem;
+      background-color: #323232;
+      width: 0.2rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px; }
+  .book_audio .audio_controls {
+    margin-top: 0.33rem;
+    width: 100%;
+    text-align: center; }
+    .book_audio .audio_controls .controls_icon {
+      width: 0.8rem;
+      height: 0.81rem;
+      display: inline-block; }
+      .book_audio .audio_controls .controls_icon img {
+        width: inherit;
+        height: inherit; }
+    .book_audio .audio_controls .controls_icon + .controls_icon {
+      margin-left: 0.56rem; }
+
+.book_line {
+  width: 100%;
+  height: 0.18rem;
+  background-color: #f4f4f4; }
+
+.book_detail {
+  padding: 0.3rem 0.3rem 0.98rem; }
+  .book_detail .detail_img {
+    width: 100%;
+    height: 100%; }
+  .book_detail .detail_title {
+    margin-top: 0.3rem;
+    font-size: 0.3rem;
+    font-weight: bold;
+    color: #323232; }
+  .book_detail .detail_dec {
+    font-size: 0.26rem;
+    color: #323232;
+    line-height: 0.33rem;
+    margin-top: 0.12rem; }
+  .book_detail .detail_line {
+    width: 100%;
+    height: 1px;
+    background-color: #ececec;
+    margin-top: 0.3rem; }
+
+.book_fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.98rem;
+  padding: 0 0.3rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #eeeeee; }
+  .book_fixed .fixed_txt {
+    font-size: 0.3rem;
+    color: #323232;
+    line-height: 0.98rem; }
+  .book_fixed .fixed_btn {
+    padding: 0 0.38rem;
+    height: 0.66rem;
+    margin-top: 0.16rem;
+    border-radius: 50px;
+    background-color: #cea27c;
+    line-height: 0.66rem;
+    font-size: 0.3rem;
+    color: #574434; }
+
+/*# sourceMappingURL=bookClubDetail.css.map */

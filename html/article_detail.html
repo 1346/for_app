@@ -70,23 +70,46 @@
         </div>
         <div class="shop_line"></div>
     </div>
-    <div class="fff" v-if="difficulty !== 0 && curing !== 0 && humidity !== 0">
-        <div class="divDescImage">
-            <div class="pic_left">
-                <div class="pic_number">{{ difficulty }}</div>
-                <div class="pic_sign">%</div>
-                <div class="pic_text">难度系数值</div>
+<!--    <div class="fff" v-if="difficulty !== 0 && curing !== 0 && humidity !== 0">-->
+<!--        <div class="divDescImage">-->
+<!--            <div class="pic_left">-->
+<!--                <div class="pic_number">{{ difficulty }}</div>-->
+<!--                <div class="pic_sign">%</div>-->
+<!--                <div class="pic_text">难度系数值</div>-->
+<!--            </div>-->
+<!--            <div class="pic_mid">-->
+<!--                <div class="pic_mid_num">{{ curing }}</div>-->
+<!--                <div class="pic_text" style="width: .92rem;">养护指数</div>-->
+<!--            </div>-->
+<!--            <div class="pic_mid pic_eee">-->
+<!--                <div class="pic_sign pic_jian">%</div>-->
+<!--                <div class="pic_number">{{ humidity }}</div>-->
+<!--                <div class="pic_text">湿度需求值</div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="newImageIcon" :class="{ isShareNew: isShare }" v-if="difficulty !== 0 && curing !== 0 && humidity !== 0">
+        <div class="icon_body">
+            <div class="icon_content">
+                <img src="../images/difficulty@3x.png" alt="">
+                <div class="content_value difficulty_value">{{ difficulty >= 31 ? difficulty > 60 ? "难" : "中" : "易" }}</div>
+                <div class="content_text">难度系数</div>
             </div>
-            <div class="pic_mid">
-                <div class="pic_mid_num">{{ curing }}</div>
-                <div class="pic_text" style="width: .92rem;">养护指数</div>
+            <div class="icon_content">
+                <img src="../images/curing@3x.png" alt="">
+                <div class="content_value curing_value">{{ curing }}</div>
+                <div class="content_text">养护指数</div>
             </div>
-            <div class="pic_mid pic_eee">
-                <div class="pic_sign pic_jian">%</div>
-                <div class="pic_number">{{ humidity }}</div>
-                <div class="pic_text">湿度需求值</div>
+            <div class="icon_content">
+                <img src="../images/humidity@3x.png" alt="">
+                <div class="content_value humidity_value">
+                    <span class="value">{{ humidity }}</span>
+                    <span class="value_tip">%</span>
+                </div>
+                <div class="content_text">湿度需求</div>
             </div>
         </div>
+
     </div>
     <div class="detail_content">
         <div v-html="content1"></div>

@@ -11,7 +11,7 @@
   -webkit-touch-callout:none;
 }
 .fff {
-  background-color: #fff;
+  background-color: #f8f9f8;
   padding-bottom: 0.3rem;
   padding-top: 0.375rem;
 }
@@ -312,9 +312,102 @@
   bottom: 0;
   width: 7.5rem;
   height: 1.2rem;
+  z-index: 999;
   img {
     width: inherit;
   }
+}
+
+.isShareNew {
+  margin: 0.23rem auto 0 !important;
+}
+
+.newImageIcon {
+  background-color: #f8f9f8;
+  width: 6.7rem;
+  height: 1.98rem;
+  border-radius: 0.08rem;
+  margin: 0.44rem auto 0;
+  font-size: 0;
+  .icon_body {
+    position: absolute;
+    width: 5.39rem;
+    margin-top: 0.3rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    .icon_content {
+      width: 0.97rem;
+      height: 0.96rem;
+      position: relative;
+      display: inline-block;
+      font-family: "Helvetica";
+      text-align: center;
+      img {
+        width: inherit;
+        height: inherit;
+        vertical-align: top;
+      }
+      .content_value {
+        color: #787878;
+        font-weight: bold;
+        font-size: 0.3rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        min-width: 0.4rem;
+        text-align: center;
+        line-height: 0.3rem;
+        height: 0.3rem;
+      }
+      .content_text {
+        font-size: 0.24rem;
+        color: #787878;
+        font-family: "lantingxihei";
+        width: 0.97rem;
+        height: 0.26rem;
+        line-height: 0.26rem;
+        margin-top: 0.11rem;
+      }
+      .difficulty_value {
+        font-size: 0.27rem;
+        top: 55%;
+      }
+      .curing_value {
+        top: 51%;
+        left: 48%;
+      }
+      .humidity_value {
+        min-width: 0.6rem !important;
+        font-size: 0 !important;
+        top: 58%;
+        .value {
+          font-size: 0.3rem;
+          display: inline-block;
+          vertical-align: bottom;
+        }
+        .value_tip {
+          font-size: 0.16rem;
+          display: inline-block;
+          vertical-align: bottom;
+          line-height: 1;
+          padding-bottom: 0.02rem;
+        }
+      }
+    }
+    .icon_content + .icon_content {
+      margin-left: 1.24rem;
+    }
+  }
+
 }
 
 video {
