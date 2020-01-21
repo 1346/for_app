@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>阿里云上传文件test</title>
+    <script>
+        var now = new Date().getTime();
+        document.write('<script language="javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/jquery-2.0.3.min.js?t=' + now + '"><\/script\>');
+    </script>
+<!--    <script type="text/javascript" src="../js/public_js/aliyun-oss-sdk.min.js"></script>-->
+    <script type="text/javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/vue.min.js"></script>
+</head>
+<body>
+<div id="main">
+    <div v-cloak>
+        <input type="file" id="fileName">
+        <!-- <img id="img" src="./bw1.jpg" alt=""> -->
+        <button onclick="upload()">上传</button>
+    </div>
+</div>
+<script src="http://gosspublic.alicdn.com/aliyun-oss-sdk-4.4.4.min.js"></script>
+<script type="text/javascript">
+    var client = new OSS.Wrapper({
+        region: "oss-cn-beijing", //阿里云获取
+        accessKeyId: "阿里云获取",
+        accessKeySecret: "阿里云获取",
+        bucket: "study-oss"  //要存储的目录名
+    });
+
+    function upload() {
+        var file = document.getElementById("fileName").files[0];
+        var val = document.getElementById("fileName").value;
+        // 取出文件后缀名
+        var suffix = val.substr(val.indexOf("."));
+        var obj = timestamp();
+        // var storeAs = 'upload-file/' + "/" + obj + suffix;
+        var storeAs = obj + suffix;
+        client.multipartUpload(storeAs, file).then(function (result) {
+            var url = result.res.requestUrls[0];
+            var length = url.lastIndexOf('?');
+            var imgUrl = url.substr(0,length);//文件最终路径
+            // $("#img").attr("src",url.substr(0,length))
+            console.log(url.substr(0,length))
+        }).catch(function (err) {
+            console.log(err);
+        });
+    }
+    /**
+     * 生成文件名
+     * @returns
+     */
+    function timestamp() {
+        var time = new Date();
+        var y = time.getFullYear();
+        var m = time.getMonth() + 1;
+        var d = time.getDate();
+        var h = time.getHours();
+        var mm = time.getMinutes();
+        var s = time.getSeconds();
+        return "" + y + add0(m) + add0(d) + add0(h) + add0(mm) + add0(s);
+    }
+
+    function add0(m) {
+        return m < 10 ? '0' + m : m;
+    }
+</script>
+</body>
+</html>

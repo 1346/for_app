@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+.card_content {
+  margin-top: 0.16rem;
+  margin-bottom: 2.38rem;
+  .content_dec {
+    width: 100%;
+    height: 1.4rem;
+    text-align: center;
+    background-color: #ebebeb;
+    font-size: 0.3rem;
+    color: #5f646f;
+    font-family: "纤细黑";
+    line-height: 1.4rem;
+  }
+  .content_body {
+    padding: 0 0.3rem;
+    margin-top: 0.38rem;
+    h1 {
+      font-size: 0.3rem;
+      color: #323232;
+      padding-bottom: 0.2rem;
+      margin: 0;
+    }
+    p {
+      font-size: 0.26rem;
+      color: #6b6b6b;
+      font-family: "纤细黑";
+      margin: 0;
+      padding-left: 0.3rem;
+    }
+    p + p {
+      margin-top: 0.08rem;
+    }
+  }
+}

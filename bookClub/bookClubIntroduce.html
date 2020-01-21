@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="sharecontent" data-msg-img="你的缩略图地址" data-msg-title="欢迎加入花田小憩" data-msg-content="你的简介" data-msg-callBack=""
+          data-line-img="你的缩略图地址" data-line-title="欢迎加入花田小憩" data-line-callBack=""/>
+    <title>花田小憩</title>
+    <script>
+        var now = new Date().getTime();
+        document.write('<script language="javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/jquery-2.0.3.min.js?t=' + now + '"><\/script\>');
+        document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5 + "px";
+        window.onresize = function(){ document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5 + "px" }
+    </script>
+    <script type="text/javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/vue.min.js"></script>
+    <script type="text/javascript" src="./js/login_public_750.js"></script>
+    <script src="//cdn.bootcss.com/eruda/1.5.2/eruda.min.js"></script>
+    <script>eruda.init();</script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+        .introduce {
+            font-size: 0;
+        }
+        .introduce_content {
+            width: 100%;
+            margin-bottom: 1.2rem;
+        }
+        .no_footer {
+            margin-bottom: 0 !important;
+        }
+        .introduce_content img {
+            width: inherit;
+        }
+        .introduce_footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 1.2rem;
+            padding: 0.2rem 0.3rem;
+            box-sizing: border-box;
+            border-top: 1px solid #ececec;
+            background-color: #fff;
+        }
+        .clearfix:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+        .introduce_footer div {
+            width: 48%;
+            height: 0.8rem;
+            font-size: 0.28rem;
+            border-radius: 50px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 0.8rem;
+        }
+        .footer_left {
+            float: left;
+            background-color: #323232;
+        }
+        .footer_right {
+            float: right;
+            background-color: #cf5656;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <div class="introduce">
+        <div class="introduce_content" :class="{ no_footer: !showFooter }">
+            <img src="../images/introduce_2019_11_09.jpg" alt="">
+        </div>
+        <div class="introduce_footer clearfix" v-if="showFooter">
+            <div class="footer_left" @click="groupPay">￥298/年 拼团购买</div>
+            <div class="footer_right" @click="directPay">￥328/年 点击购买</div>
+        </div>
+    </div>
+</div>
+<script>
+    var vm = new Vue({
+        el: "#main",
+        data: {
+            userId: '',
+            uno: '',
+            origin: '',
+            orderId: '',
+            groupUrl: '',
+            showFooter: true
+        },
+        created: function() {
+            this.userId = getCookie("user");
+            if (this.userId) {
+                this.groupUrl = "../bookBuyCard.html?from=group&uno=" + this.uno + "&origin=" + this.origin + "&orderId=" + this.orderId;
+            }
+            this.uno = getLocationHrefPara2("uno");
+            this.origin = getLocationHrefPara2("origin");
+            this.orderId = getLocationHrefPara2("orderId");
+            if (getLocationHrefPara2("from") == 'look') {
+                this.showFooter = false;
+            }
+            this.getUserId(this.userId);
+        },
+        methods: {
+            getUserId: function (userId) {
+                if (userId) {
+                    var token = localStorage.getItem("HTXQToken");
+                    $.ajax({
+                        url: location.protocol + "//" + window.location.host + "/cactus/bookClub/query/trade/group/check?customerId=" + userId + "&token=" + token,
+                        type: 'GET',
+                        dataType: 'json',
+                        success: function (result) {
+                            console.log(result);
+                            if(result.code == "000000"){
+//                     window.location.href = location.protocol + "//" + window.location.host + "/h5/WXactivity/groupbuy/collage_join.html?uno=" + uno + "&origin=" + origin + "&orderId=" + result.data.orderId;
+                            }else if(result.code == "110101"){
+                                // 跳转至拼团状态页面
+                                vm.groupUrl = "../bookClubGroupIndex.html?from=group&uno=" + this.uno + "&origin=" + this.origin + "&orderId=" + result.data.orderId;
+                            }
+                        },
+                        error: function () {
+
+                        }
+                    });
+                }
+            },
+
+            groupPay: function () {
+                if (!this.userId) {
+                    loginShow();
+                }else{
+                    window.location.href = vm.groupUrl;
+                }
+            },
+
+            directPay: function () {
+                window.location.href = "../bookBuyCard.html?from=single&uno=" + this.uno + "&origin=" + this.origin + "&orderId=" + this.orderId;
+            },
+
+            loginSuccessAction: function(){
+                window.location.reload();
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -21,18 +21,18 @@
 <body>
 <div id="main">
     <div v-cloak>
-        <div class="book_header">
+        <div class="book_header" v-if="type !== 'inApp'">
             <div class="header_img">
-                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1578917281142&di=609c630e6544fdd3e08705f9a4562599&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201803%2F17%2F20180317181132_WHUFV.jpeg" alt="">
+                <img :src="detail.bookImage" alt="">
             </div>
             <div class="header_right">
-                <p class="right_title">花朵的秘密生命花朵的秘密生命花朵的秘密生命花朵的秘密生命花朵的秘密生命花朵的秘密生命花朵的秘密生命花朵的秘密生命花朵的秘密生命花朵的秘密生命花朵的秘密生命</p>
-                <p class="right_dec">一本专注于没事基础花艺设计的教科书啊啊啊啊啊啊啊啊</p>
-                <p class="right_name">本书解读：曹小花</p>
-                <p class="right_read"><img src="../images/vfl@3x.png" alt="">播放260.8万次</p>
+                <p class="right_title">{{ detail.title }}</p>
+                <p class="right_dec">{{ detail.intro }}</p>
+                <p class="right_name">{{ detail.reader }}</p>
+                <p class="right_read"><img src="../images/vfl@3x.png" alt="">{{ detail.playCount }}</p>
             </div>
         </div>
-        <div class="book_audio">
+        <div class="book_audio" v-if="type !== 'inApp' && audioSrc">
             <div class="progress_box">
                 <div class="audio_progress" ref="progress">
                     <div class="progress_ok" :style="{ width: leftVal }"></div>
@@ -44,7 +44,7 @@
                          @touchend="valEnd">{{ playTime }}/{{ totalTime }}</div>
                 </div>
                 <div class="progress_right_null"></div>
-                <div class="progress_left_null"></div>
+<!--                <div class="progress_left_null"></div>-->
             </div>
             <div class="audio_controls">
                 <div class="controls_icon" @click="minus">
@@ -59,23 +59,20 @@
                 </div>
             </div>
         </div>
-        <div class="book_line"></div>
-        <div class="book_detail">
-            <img class="detail_img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1579513215&di=db7077d0bd89dbf0c01aadcddaba3cff&imgtype=jpg&er=1&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201803%2F03%2F2018030391709_zuld8.thumb.700_0.jpeg" alt="">
+        <div class="book_line" v-if="type !== 'inApp'"></div>
+        <div class="book_detail" :class="{ in_app_detail: type == 'inApp' }">
+            <img class="detail_img" :src="detail.coverImage" alt="">
             <p class="detail_title">作者介绍</p>
-            <p class="detail_dec">曹雪：当代胡阿姨接的魔术师。</p>
+            <p class="detail_dec" v-html="detail.authorIntro"></p>
             <div class="detail_line"></div>
             <p class="detail_title">图书介绍</p>
-            <p class="detail_dec">基于美式经典商业花艺设计系统的编写。针对零基础的和初级的花艺从业者编写，切实系统的知道开花店所需要的花艺技术</p>
+            <p class="detail_dec" v-html="detail.bookIntro"></p>
             <div class="detail_line"></div>
             <p class="detail_title">出版信息</p>
-            <p class="detail_dec">出版社：化学工业出版社</p>
-            <p class="detail_dec">页数：106</p>
-            <p class="detail_dec">开本：16开</p>
-            <p class="detail_dec">尺寸：249 x 235 x 10</p>
+            <p class="detail_dec" v-html="detail.publishIntro"></p>
         </div>
-        <div class="book_fixed clearfix">
-            <div class="fixed_txt fl">￥188 开通VIP畅听250+景点书记</div>
+        <div class="book_fixed clearfix" @click="goBuy" v-if="type !== 'inApp'">
+            <div class="fixed_txt fl">{{ detail.pageFooterTitle }}</div>
             <div class="fixed_btn fr">立即购买</div>
         </div>
         <audio ref="audio" loop :src="audioSrc"></audio>

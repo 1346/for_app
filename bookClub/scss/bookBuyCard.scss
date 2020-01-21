@@ -1,0 +1,247 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+  font-size: 0;
+  background-color: #f8f8f8;
+}
+
+@font-face{
+  font-family: 'songti';
+  src:url(https://htxq.oss-cn-beijing.aliyuncs.com/resources/fonts/simsun_htxq_5.0.otf);
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.card_header {
+  position: relative;
+  width: 100%;
+  height: 4.3rem;
+  .header_bg {
+    width: inherit;
+    height: inherit;
+  }
+  .header_content {
+    position: absolute;
+    top: 1.31rem;
+    left: 0.8rem;
+    .content_title {
+      font-size: 0.5rem;
+      color: #573C25;
+      font-family: "新宋体";
+      line-height: 1;
+    }
+    .content_tip {
+      font-size: 0.34rem;
+      color: #573C25;
+      font-family: "新宋体";
+      margin-top: 0.58rem;
+      line-height: 1;
+    }
+    .content_price {
+      margin-top: 0.29rem;
+      margin-left: -0.08rem;
+      line-height: 1;
+      span {
+        display: inline-block;
+      }
+      .price_val {
+        font-size: 0.48rem;
+        color: #573C25;
+        font-family: "宋体";
+      }
+      .price_txt {
+        font-size: 0.34rem;
+        color: #573C25;
+        font-family: "宋体";
+      }
+    }
+  }
+}
+
+.card_footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 0 0.2rem 0.2rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .footer_text {
+    padding: 0.28rem 0;
+    box-sizing: inherit;
+    .text_img {
+      width: 0.39rem;
+      height: 0.3rem;
+      margin-right: 0.04rem;
+      img {
+        height: 0.3rem;
+        vertical-align: top;
+      }
+    }
+    span {
+      display: inline-block;
+      font-size: 0.26rem;
+      color: #323232;
+      font-family: "纤细黑";
+      vertical-align: middle;
+    }
+    .text_click {
+      color: #A78B72;
+      text-decoration: underline;
+    }
+  }
+  .footer_btn {
+    width: 100%;
+    height: 0.9rem;
+    border-radius: 0.05rem;
+    background-color: #323232;
+    text-align: center;
+    span {
+      font-size: 0.3rem;
+      color: #e4b287;
+      font-family: "兰亭黑";
+      line-height: 0.9rem;
+    }
+    img {
+      width: 0.2rem;
+      height: 0.2rem;
+      margin-left: 0.12rem;
+    }
+  }
+}
+
+.show_statement {
+  transform: translateX(0) !important;
+}
+
+.card_statement {
+  height: 100vh;
+  width: 100%;
+  transform: translateX(100%);
+  transition: all 0.4s;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #f4f4f4;
+  .statement_header {
+    height: 1rem;
+    width: 100%;
+    border-bottom: 1px solid #ececec;
+    position: fixed;
+    top: 0;
+    .header_back {
+      width: 1rem;
+      height: 1rem;
+      float: left;
+      background: transparent url(https://api.htxq.net/h5/mall/images/left_2.png) center center/.2rem .34rem no-repeat;
+    }
+    .header_title {
+      width: calc(100% - 2rem);
+      text-align: center;
+      font-size: 0.34rem;
+      color: #323232;
+      line-height: 1rem;
+      display: inline-block;
+      float: left;
+    }
+  }
+  .statement_content {
+    height: calc(100vh - 1rem);
+    margin-top: 1rem;
+    overflow: scroll;
+    .state{
+      /*margin-top: 0.2rem;*/
+      /*border-top:1px solid #dcdcdc;*/
+      background-color: white;
+      padding: 0.29rem 0.3rem 0;
+    }
+    .state h3{
+      color: #323232;
+      font:bold 0.36rem/0.5rem "Microsoft YaHei";
+      padding-bottom: 0.2rem;
+    }
+    .state p{
+      text-indent: 0.5rem;
+      font:0.26rem/0.38rem "Microsoft YaHei";
+      padding-bottom: 0.2rem;
+      color:#777;
+    }
+    .kk{
+      text-indent: 1rem!important;
+      /*padding-left: 0.5rem;*/
+    }
+  }
+}
+
+.card_in_app {
+  .in_header {
+    @extend .card_header;
+    .in_header_t {
+      position: absolute;
+      top: 1.05rem;
+      left: 0.55rem;
+      img {
+        width: 1.28rem;
+        height: 1.28rem;
+        border-radius: 50%;
+        margin-right: 0.4rem;
+      }
+      .t_right {
+        max-height: 1.28rem;
+        display: inline-block;
+        vertical-align: top;
+        .right_title {
+          font-size: 0.5rem;
+          color: #573C25;
+          line-height: 0.7rem;
+          font-family: "songti";
+        }
+        .right_tip {
+          font-size: 0.28rem;
+          color: #573C25;
+          font-family: "兰亭黑";
+          margin-top: 0.1rem;
+        }
+      }
+    }
+    .in_header_b {
+      position: absolute;
+      bottom: 0.65rem;
+      left: 0.55rem;
+      font-size: 0.26rem;
+      color: #573C25;
+      font-family: "兰亭黑";
+      line-height: 1;
+      .b_time {
+        line-height: 1;
+        margin-top: 0.1rem;
+      }
+    }
+  }
+  .in_app_content {
+    .card_content {
+      margin-bottom: 0.2rem;
+    }
+  }
+}

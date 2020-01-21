@@ -1,0 +1,91 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  background-color: #f4f4f4;
+  font-size: 0; }
+
+.fr {
+  float: right; }
+
+.fl {
+  float: left; }
+
+[v-cloak] {
+  display: none; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.index_header {
+  width: 100%;
+  padding: 0.3rem;
+  box-sizing: border-box;
+  background-color: #fff; }
+  .index_header img {
+    width: 2.46rem;
+    height: 2.46rem;
+    vertical-align: top;
+    margin-right: 0.26rem; }
+  .index_header .header_content {
+    max-height: 2.46rem;
+    width: 4.18rem;
+    overflow: hidden;
+    display: inline-block; }
+    .index_header .header_content .content_title {
+      font-size: 0.3rem;
+      padding-top: 0.08rem;
+      color: #323232;
+      line-height: 0.36rem; }
+    .index_header .header_content .content_dec {
+      color: #777777;
+      font-size: 0.26rem;
+      line-height: 0.36rem;
+      margin-top: 0.2rem; }
+    .index_header .header_content .content_price {
+      margin-top: 0.3rem; }
+      .index_header .header_content .content_price span {
+        display: inline-block; }
+      .index_header .header_content .content_price .price_tip {
+        font-size: 0.28rem;
+        color: #777777;
+        margin-left: -0.16rem; }
+      .index_header .header_content .content_price .price_sale {
+        font-size: 0.42rem;
+        font-family: "微软雅黑";
+        color: #c3a257;
+        margin-right: 0.17rem; }
+      .index_header .header_content .content_price .price_origin {
+        font-size: 0.24rem;
+        color: #979797;
+        text-decoration: line-through; }
+
+.index_tag {
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  margin-top: 0.2rem;
+  padding: 0.3rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .index_tag div {
+    display: inline-block;
+    width: 22%;
+    height: 0.58rem;
+    line-height: 0.58rem;
+    border-radius: 50px;
+    background-color: #404040;
+    color: #ffffff;
+    font-size: 0.26rem;
+    text-align: center; }
+  .index_tag div + div {
+    margin-left: 4%; }
+
+/*# sourceMappingURL=bookClubGroupIndex.css.map */

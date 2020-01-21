@@ -7,11 +7,18 @@ var vm = new Vue({
         width: 0,
         totalTime: '00:00',
         playTime: '00:00',
-        audioSrc: ''
+        audioSrc: '',
+        type: '',
+        detail: ''
     },
 
     mounted: function() {
-        this.getData();
+        this.type = getLocationHrefPara2("type");
+        if (this.type == 'inApp') {
+            this.getDetailForApp();
+        } else {
+            this.getData();
+        }
     },
 
     watch: {
@@ -25,33 +32,63 @@ var vm = new Vue({
 
     methods: {
         getData: function() {
-            this.audioSrc = 'https://cdn-ali.dushu.io/audio/full/77d373a58a5dfaf69790648b255c36a2_zdr6b7.mp3';
-            var timer = function () {};
             var _this = this;
-            if (!this.$refs.audio.duration) {
-                timer = setInterval(function () {
-                    var value = _this.$refs.audio.duration;
-                    if (!value) {
-                        _this.totalTime = '00:00';
+            $.ajax({
+                url: window.location.origin + "/cactus/bookClub/detail/wap?bookId=" + getLocationHrefPara2("bookId"),
+                type: 'GET',
+                dataType: 'json',
+                data: {}
+            })
+                .done(function(json) {
+                    if ( json.code == "000000" ) {
+                        vm.detail = json.data;
+                        var reg = /[\r\n]+/g;
+                        vm.detail.authorIntro = vm.detail.authorIntro.replace(reg, "<br />");
+                        vm.detail.bookIntro = vm.detail.bookIntro.replace(reg, "<br />");
+                        vm.detail.publishIntro = vm.detail.publishIntro.replace(reg, "<br />");
+                        vm.audioSrc = json.data.audioFile;
+                        var value = json.data.audioDuration;
+                        if (!value) {
+                            _this.totalTime = '00:00';
+                        } else {
+                            //分钟
+                            var minute = value / 60;
+                            var minutes = parseInt(minute);
+                            if (minutes < 10) {
+                                minutes = "0" + minutes;
+                            }
+                            //秒
+                            var second = value % 60;
+                            var seconds = Math.round(second);
+                            if (seconds < 10) {
+                                seconds = "0" + seconds;
+                            }
+                            _this.totalTime = minutes + ":" + seconds;
+                        }
                     } else {
-                        clearInterval(timer);
-                        //分钟
-                        var minute = value / 60;
-                        var minutes = parseInt(minute);
-                        if (minutes < 10) {
-                            minutes = "0" + minutes;
-                        }
-                        //秒
-                        var second = value % 60;
-                        var seconds = Math.round(second);
-                        if (seconds < 10) {
-                            seconds = "0" + seconds;
-                        }
-                        _this.totalTime = minutes + ":" + seconds;
+                        showWrong(json.text);
                     }
-                    console.log(123)
-                }, 500);
-            }
+                });
+        },
+
+        getDetailForApp: function() {
+            $.ajax({
+                url: window.location.origin + "/cactus/bookClub/basicIntro?bookId=" + getLocationHrefPara2("bookId"),
+                type: 'GET',
+                dataType: 'json',
+                data: {}
+            })
+                .done(function(json) {
+                    if ( json.code == "000000" ) {
+                        vm.detail = json.data;
+                        var reg = /[\r\n]+/g;
+                        vm.detail.authorIntro = vm.detail.authorIntro.replace(reg, "<br />");
+                        vm.detail.bookIntro = vm.detail.authorIntro.replace(reg, "<br />");
+                        vm.detail.publishIntro = vm.detail.authorIntro.replace(reg, "<br />");
+                    } else {
+                        showWrong(json.text);
+                    }
+                });
         },
 
         /**
@@ -76,26 +113,26 @@ var vm = new Vue({
                     audio.pause();// 这个就是暂停
                 }
             }
-            this.$nextTick(function () {
-                var value = this.$refs.audio.duration;
-                if (!value) {
-                    this.totalTime = '00:00';
-                } else {
-                    //分钟
-                    var minute = value / 60;
-                    var minutes = parseInt(minute);
-                    if (minutes < 10) {
-                        minutes = "0" + minutes;
-                    }
-                    //秒
-                    var second = value % 60;
-                    var seconds = Math.round(second);
-                    if (seconds < 10) {
-                        seconds = "0" + seconds;
-                    }
-                    this.totalTime = minutes + ":" + seconds;
-                }
-            });
+            // this.$nextTick(function () {
+            //     var value = this.$refs.audio.duration;
+            //     if (!value) {
+            //         this.totalTime = '00:00';
+            //     } else {
+            //         //分钟
+            //         var minute = value / 60;
+            //         var minutes = parseInt(minute);
+            //         if (minutes < 10) {
+            //             minutes = "0" + minutes;
+            //         }
+            //         //秒
+            //         var second = value % 60;
+            //         var seconds = Math.round(second);
+            //         if (seconds < 10) {
+            //             seconds = "0" + seconds;
+            //         }
+            //         this.totalTime = minutes + ":" + seconds;
+            //     }
+            // });
         },
 
         /**
@@ -190,6 +227,10 @@ var vm = new Vue({
 
         valEnd: function (e) {
             this.touch.state = false
+        },
+
+        goBuy: function () {
+            window.location.href = location.origin + "/h5/WXactivity/bookBuyCard.html"
         }
     }
 });

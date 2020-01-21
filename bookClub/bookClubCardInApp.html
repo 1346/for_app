@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>花田小憩读书卡</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="format-detection"content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="../bookClub/css/bookBuyCard.css?t=1">
+    <link rel="stylesheet" href="../bookClub/css/cardComponent.css">
+    <script>
+        var now = new Date().getTime();
+        document.write('<script language="javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/jquery-2.0.3.min.js?t=' + now + '"><\/script\>');
+        document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5 + "px";
+        window.onresize = function(){ document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5 + "px" }
+    </script>
+    <script type="text/javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/vue.min.js"></script>
+    <script type="text/javascript" src="./js/login_public_750.js"></script>
+    <script src="./js/cardComponent.js"></script>
+</head>
+<body>
+<div id="main">
+    <div class="card_in_app" v-cloak>
+        <div class="in_header">
+            <img class="header_bg" src="../bookClub/images/card_bg@3x.png" alt="">
+            <div class="in_header_t">
+                <img :src="detail.memberIcon" alt="">
+                <div class="t_right">
+                    <div class="right_title">读书卡（年会员）</div>
+                    <div class="right_tip">{{ detail.memberName }}</div>
+                </div>
+            </div>
+            <div class="in_header_b">
+                <div class="b_id">读书卡号码：{{ !detail.isMember ? "暂无" : detail.cardNumber }}</div>
+                <div class="b_time">会员身份：{{ !detail.isMember ? "未开通" : (detail.isExpire ? "已过期" : detail.membership) }}</div>
+            </div>
+        </div>
+        <div class="in_app_content">
+            <card-content></card-content>
+        </div>
+    </div>
+</div>
+<script>
+    var vm = new Vue({
+        el: "#main",
+        data: {
+            detail: ''
+        },
+        created: function() {
+            this.getDetail()
+        },
+        methods: {
+            getDetail: function() {
+                $.ajax({
+                    url: window.location.origin + "/cactus/bookClub/query/member/card/detail?customerId=" + getLocationHrefPara2("customerId"),
+                    type: 'GET',
+                    dataType: 'json',
+                    data: {}
+                })
+                    .done(function(json) {
+                        if ( json.code == "000000" ) {
+                            vm.detail = json.data;
+                        } else {
+                            showWrong(json.text);
+                        }
+                    });
+            }
+        }
+    })
+</script>
+</body>
+</html>

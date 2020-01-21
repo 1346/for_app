@@ -1,6 +1,8 @@
 body {
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 #main {
@@ -105,7 +107,7 @@ p {
     width: 100%;
     position: relative;
     .audio_progress {
-      width: calc(100% - 1.18rem - 0.2rem);
+      width: calc(100% - 1.18rem);
       height: 0.04rem;
       border-top-left-radius: 50px;
       border-bottom-left-radius: 50px;
@@ -187,6 +189,14 @@ p {
   background-color: #f4f4f4;
 }
 
+.in_app_detail {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  .detail_line {
+    height: 0.01rem !important;
+  }
+}
+
 .book_detail {
   padding: 0.3rem 0.3rem 0.98rem;
   .detail_img {
@@ -201,8 +211,8 @@ p {
   }
   .detail_dec {
     font-size: 0.26rem;
-    color: #323232;
-    line-height: 0.33rem;
+    color: #6b6b6b;
+    line-height: 0.4rem;
     margin-top: 0.12rem;
   }
   .detail_line {

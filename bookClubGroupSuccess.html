@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="sharecontent" data-msg-img="你的缩略图地址" data-msg-title="欢迎加入花田小憩" data-msg-content="你的简介" data-msg-callBack=""
+   	 data-line-img="你的缩略图地址" data-line-title="欢迎加入花田小憩" data-line-callBack=""/>
+    <title>花田小憩</title>
+    <script src="bookClub/js/mui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bookClub/css/index.min.css"/>
+    <link href="bookClub/css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/vue.min.js"></script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <!--<script type="text/javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/test/login_public_750_v3.js?t=201807071348"></script>-->
+    <script type="text/javascript" src="bookClub/js/login_public_750_v5.js?t=201807071443"></script>
+	<script id="spay-script" src="https://jspay.beecloud.cn/1/pay/jsbutton/returnscripts?appId=32fb8378-a6e4-4c68-a14b-277cd25f9001"></script>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+<!--    <script src="//cdn.bootcss.com/eruda/1.5.2/eruda.min.js"></script>-->
+<!--    <script>eruda.init();</script>-->
+</head>
+<body>
+	<div class="box">
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell mui-media mui-padding banner-link">
+				<!--<a href="#">-->
+					<img src="bookClub/images/study.jpg" alt="" class="mui-pull-left mui-radius pull-right" width="123px" height="123px"/>
+					<div class="mui-media-body" id="pull-padding-left">
+						<div class="pull-bottom media-title mui-ellipsis-2">花田小憩【VIP会员学习卡】1年</div>
+						<div class="media-body pull-title mui-ellipsis-2">超过10万价值的职业花艺在线课堂，已有20000人加入</div>
+						<div class='mui-ellipsis mui-ell'>
+							<span class="media-size mui-pull-left" id="c_t_price">【2人团】</span>
+							<span class="media-size-price mui-pull-left" id="salePrice">￥</span>
+							<span class="media-size-prices mui-pull-left" id="originPrice"></span>
+						</div>
+					</div>
+				<!--</a>-->
+			</li>
+		</ul>
+		<ul id="tag">
+            <li class="tag_list mui-text-center" id="teacher">解读者介绍</li>
+            <li class="tag_list mui-text-center" id="bookList">书单</li>
+	    	<li class="tag_list mui-text-center" id="call_user">联系客服</li>
+	    	<li class="tag_list mui-text-center" id="app">下载App</li>
+	    </ul>
+		<div class="success">
+			<div class="success_g mui-text-center"><img src="bookClub/images/study_success.png" alt="" class="fail_img" width="27px"/><span class="fail_title">拼团成功</span></div>
+		</div>
+		<div class="memberContainer" id="memberContainer">
+			<div class="join_ct pull-bottoms">
+				<div class="ct_k" id="ct_k">
+					<div class="img_k mui-pull-left mui-media-body" v-for="(member,index) in members" v-if="index<2">
+						<img src="bookClub/images/success_t.png" alt="" width="35px" id="group" :class="{'active_img':!index}"/>
+						<img src="bookClub/images/head.jpg" alt="" width="49px" height="49px" class="border_r" v-bind:src="member.headIcon + '?x-oss-process=image/resize,w_64'"/>
+						<p class="img_title mui-text-center mui-ellipsis-2 media-body">{{member.nickName}}</p>
+					</div>
+				</div>
+			</div>
+			<ul class="mui-table-view join_list margin-b">
+				<li class="mui-table-view-cell mui-media" v-for="(member,index) in members" v-if="index==0">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left border_r" v-bind:src="member.headIcon + '?x-oss-process=image/resize,w_64'">
+						<div class="mui-media-body list_t">
+							<sapn class="list_size">{{member.nickName}}</sapn>
+							<p class='mui-ellipsis mui-pull-right list_size' id="list_size">{{member.joinTimeTxt}}&nbsp;{{member.identityVal == 1 ? '开团' : '加入'}}</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<ul id="active" class="mui-text-left mui-buttom">
+				<li class="active_t" >活动规则:</li>
+				<li class="active_title">1， 拼团失败：24小时内钱款原路退回。</li>
+				<li class="active_title">2，会员生效：拼团成功后生效（非付款成功）。</li>
+				<li class="active_title">3，身份使用：用购买的手机号登录花田小憩App即可。</li>
+                <li class="active_title">* 客服电话 010-56270610（工作时间） 管理员微信号：htxq02</li>
+			</ul>
+		</div>
+	</div>
+	<footer>
+		<a href="#"><button id="index_button" class="fail_button footer_button">我也要开团</button></a>
+	</footer>
+</body>
+<!--/groupbuy/bookClubGroupSuccess.html-->
+<script type="text/javascript">
+var host    = window.location.host;
+    var uno = getLocationHrefPara("uno");
+    var origin = encodeURIComponent(getLocationHrefPara("origin"));
+    /*让图片加载出来，防止点击仿checkbox发生闪烁*/
+    var openId = sessionStorage.getItem("HTXQopenId") == null ? "" : sessionStorage.getItem("HTXQopenId");
+    // console.log("OPEN-ID = " + openId);
+    var userId  = getCookie("user");
+    var token = "";
+
+    var oImg    = new Image();
+    oImg.src    = "https://htxq.oss-cn-beijing.aliyuncs.com/resources/images/htxq5.0/card_checkbox.png";
+
+    var equip = judegEquipment();
+    var time = 0;    //倒计时秒数
+
+    var orderId = getLocationHrefPara("orderId");
+    // if(orderId){orderId = orderId.replace(",","")}
+    if(orderId && orderId.indexOf(",") > -1){
+        orderId = orderId.replace(",","")
+        window.location.href = location.protocol + "//" + window.location.host + "/h5/WXactivity/bookClubGroupSuccess.html?orderId=" + orderId + "&uno=" + uno + "&origin=" + origin;
+    }
+    var introduceLink = location.protocol + "//" + window.location.host + "/h5/WXactivity/bookClub/bookClubIntroduce.html?orderId=" + orderId + "&uno=" + uno + "&origin=" + origin;
+    var downloadAppLink = "http://a.app.qq.com/o/simple.jsp?pkgname=com.floral.life&fromcase=40002";
+        $("#teacher").on('click', function () {
+            window.location.href = "bookClub/bookClubTeacher.html"
+        })
+        $("#bookList").on('click', function () {
+            window.location.href = "bookClub/bookClubList.html"
+        })
+        $("#call_user").on('click', function () {
+            window.location.href = "bookClub/bookClubCall.html"
+        })
+        $("#app").on('click', function () {
+        	window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.floral.life&from=singlemessage"
+        })
+	$(document).ready(function(){
+
+        // console.log(getGroupBuyDetailUrl);
+         //url:  + "/cactus/researchCommunity/buyCardWx?customerId=" + customerId + "&&token=" + (localStorage.getItem("HTXQToken") || token) + "&&uno=" + uno + "&origin=" + origin,
+
+        $("#join_button").on('click', function(event) {
+
+            equip = judegEquipment();
+
+            if (!userId) {
+                loginShow();
+            } else {
+                if (equip == "weixin"){
+                    // beePay("",userId);
+                    getWxPayDetail(userId);
+                } else {
+                    // wxPayH5(userId);
+                }
+            }
+
+            event.preventDefault();
+
+        });
+
+        function getWxPayDetail(userId) {
+            if (orderId) {
+                $.ajax({
+                    url: location.protocol + "//" + window.location.host + "/cactus/bookClub/buyCardWxJoin?customerId=" + userId + "&&token=" + (localStorage.getItem("HTXQToken") || token) + "&&uno=" + uno + "&origin=" + origin + "&orderId=" + orderId + "&openId=" + openId,
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {},
+                    contentType: "application/json; charset=utf-8",
+                })
+                    .done(function(json){
+                        if(json.code == "000000"){
+                            wxPayJoin(json.data);
+                        } else if(json.code == "100000"){
+                            loginShow();
+                        } else {
+                            showWrong(json.text);
+                        }
+                    })
+            } else {
+                showWrong("未发现拼团订单，请检查分享链接")
+            }
+        }
+
+        function wxPayJoin(data){
+            wx.chooseWXPay({
+                timestamp: data.timeStamp,
+                nonceStr: data.nonceStr,
+                package: data.package,
+                signType: data.signType,
+                paySign: data.paySign,
+                success: function (res) {
+                    window.location.href = "./buyCard/payResult.html?result=true";
+                },
+                cencel:function(res){　　　// 支付取消回调函数
+                    console.log('cencel',res);
+                },
+                fail: function(res){　　　　　　　　　　// 支付失败回调函数
+                    console.log('fail',res);
+                    window.location.href = "./buyCard/payResult.html?result=false";
+                }
+            });
+        }
+
+        var getGroupBuyDetailUrl;
+        var requireReload = false;
+
+        if(orderId){
+            getGroupBuyDetailUrl = location.protocol + "//" + window.location.host + "/cactus/bookClub/query/trade/group/detail?orderId=" + orderId;
+        }else{
+            if(userId){
+                getGroupBuyDetailUrl = location.protocol + "//" + window.location.host + "/cactus/bookClub/query/trade/group/detail?customerId=" + userId;
+                requireReload = true;
+			}else{
+                window.location.href = introduceLink;
+			}
+        }
+
+		$.ajax({
+            url: getGroupBuyDetailUrl,
+            type: 'POST',
+            dataType: 'json',
+            success: function (result) {
+                console.log(result);
+                if(result.code == "000000"){
+                    if(requireReload){
+                        window.location.href = location.protocol + "//" + window.location.host + "/h5/WXactivity/bookClubGroupSuccess.html?orderId=" + result.data.orderId;
+					}
+                    initial(result.data);
+                }else{
+                    window.location.href = introduceLink;
+                }
+            },
+			error: function () {
+                window.location.href = introduceLink;
+            }
+        });
+
+	});
+
+    var memberContainer = new Vue({
+      el: '#memberContainer',
+      data: {
+        members:{}
+      }
+    });
+
+    function initial(data){
+
+        $("#salePrice").text(data.salePrice);
+        $("#originPrice").text("￥518");
+        $("#status").text(data.statusTxt);
+
+        if(data.statusVal == 1){
+            time = data.expireVal;
+            formatSeconds(time);
+            $("#join_button").show();
+            $("#projectile_button").show();
+        }else{
+            $("#content").text(data.content);
+            $("#index_button").show();
+        }
+
+        //登录模块
+        $("#index_button").on("click",function(){
+             $(".projectiles").fadeIn(1500).fadeOut(3500);
+        })
+
+        //更多
+        $(".mui-icon-more").on("click",function(){
+            $(".browser_shadow").fadeIn()
+            $(".look").fadeIn()
+        })
+
+        $(".look").on("click",function(){
+            $(".browser_shadow").fadeOut()
+            $(".look").fadeOut()
+        })
+
+        $("#lookProductDetail").attr("href", downloadAppLink);
+
+        $("#index_button").click(function(){
+            window.location.href = introduceLink;
+        });
+
+        $(".banner-link").click(function(){
+            window.location.href = introduceLink + "&from=look";
+        });
+
+        $("#projectile_button").click(function(){
+            $(".browser_shadow").show();
+        });
+        $(".browser_shadow").click(function(){
+            $(this).hide();
+        });
+
+        memberContainer._data.members = data.members;
+
+
+        share.title = "最后24小时：拼团花艺学习卡送￥68元曹小花签名新书，仅剩" + (data.limit - data.count) + "位";
+        share.content = "价值10万的全球花艺名师的在线学习卡，拼团进行中";
+        share.url = location.protocol + "//" + window.location.host + "/h5/WXactivity/bookClubGroupSuccess.html?orderId=" + data.orderId + "&uno=" + uno + "&origin=" + origin;
+
+    }
+
+    var timer = setInterval(function(){
+        if (time > 1) {
+            formatSeconds(time)
+            --time;
+        }else{  //时间到了
+            if(time == 1){
+                window.location.reload();
+            }
+            clearInterval(timer);
+        }
+    },1000);
+
+    function formatSeconds(value) {
+
+        var seconds = parseInt(value);// 秒
+        var minutes = 0;// 分
+        var hours = 0;// 小时
+
+        if(seconds > 60) {
+            minutes = parseInt(seconds/60);
+            seconds = parseInt(seconds%60);
+            if(minutes > 60) {
+                hours = parseInt(minutes/60);
+                minutes = parseInt(minutes%60);
+            }
+        }
+
+        var forTime = [hours,minutes,seconds];
+
+        if(forTime[0]<10){
+            var hours="0"+forTime[0]
+        }
+
+        if(forTime[1]<10){
+            var minutes="0"+forTime[1]
+        }
+
+        if(forTime[2]<10){
+            var seconds="0"+forTime[2]
+        }
+
+        var dom = '剩余时间： <span class="b_time">' + hours + '</span> 时 <span class="b_time">' +  minutes + '</span> 分 <span class="b_time">' +seconds+ '</span> 秒'
+
+        $("#time").html(dom);
+
+    };
+
+    /* 支付方法*/
+    // function wxPayH5(customerId){   //外部浏览器支付方法
+    //     $.ajax({
+    //         url: location.protocol + "//" + window.location.host + "/cactus/researchCommunity/buyCardWxH5Join?customerId=" + customerId + "&&token=" + (localStorage.getItem("HTXQToken") || token) + "&&uno=" + uno + "&origin=" + origin + "&orderId=" + orderId,
+    //         type: 'POST',
+    //     })
+    //     .done(function(json) {
+    //         if (json.code == "000000" )  {
+    //             window.location.href = json.data + "&redirect_url=" + window.location.href;
+    //         }else if( json.code == "100000" ){
+    //             showWrong(json.text);
+    //             loginShow();
+    //         }else{
+    //             showWrong(json.text);
+    //         }
+    //     })
+    //     .fail(function() {
+    //         showWrong("服务器请求失败")
+    //     })
+    // }
+    //
+    // // function beePay(paymentNo,customerId){
+    // //     $.ajax({
+    // //         url: location.protocol + "//" + window.location.host + "/cactus/researchCommunity/buyCardWxJoin1?customerId=" + customerId + "&&token=" + (localStorage.getItem("HTXQToken") || token) + "&&uno=" + uno + "&origin=" + origin + "&orderId=" + orderId + "&openId=" + openId,
+    // //         type: 'POST',
+    // //     })
+	// 	// .done(function(json) {
+	// 	// 	if (json.code == "000000" )  {
+	// 	// 		window.location.href = json.data + "&redirect_url=" + window.location.href;
+	// 	// 	}else if( json.code == "100000" ){
+	// 	// 		showWrong(json.text);
+	// 	// 		loginShow();
+	// 	// 	}else{
+	// 	// 		showWrong(json.text);
+	// 	// 	}
+	// 	// })
+	// 	// .fail(function() {
+	// 	// 	showWrong("服务器请求失败")
+	// 	// })
+    // // };
+    //
+    // function beePay(paymentNo,customerId){
+    //   $.ajax({
+    //         type: 'POST',
+    //         async: true,
+    //         url: location.protocol + "//" + window.location.host + "/cactus/researchCommunity/buyCardWxJoin?customerId=" + customerId + "&&token=" + (localStorage.getItem("HTXQToken") || token) + "&&uno=" + uno + "&origin=" + origin + "&orderId=" + orderId,
+    //         dataType : "json",
+    //         contentType: "application/json; charset=utf-8",
+    //         data: {},
+    //         success: function (json) {
+    //             console.log(json);
+    //             if (json.code == "000000" ) {
+    //                 var out_trade_no    = json.data.out_trade_no;           //订单号
+    //                 var title           = json.data.title;                  //订单标题
+    //                 var amount          = json.data.amount;                 //付款金额
+    //                 var sign            = json.data.sign;                   //订单签名
+    //                 var customerId      = json.data.optional.customerId;    //
+    //                 var paymentNo       = json.data.optional.paymentNo;     //
+    //                 var business        = json.data.optional.business;      //
+    //                 var customerNo      = json.data.optional.customerNo;    //
+    //                 // alert(json);
+    //                 bcPay(out_trade_no,title,amount,sign,customerId,paymentNo,business,customerNo);
+    //             }else if( json.code == "100000" ){
+    //                 showWrong(json.text);
+    //                 loginShow();
+    //             }else{
+    //                 showWrong(json.text);
+    //             }
+    //         },
+    //         error: function (xhr, textStatus, errorThrown) {
+    //           showWrong("服务器请求失败");
+    //         }
+    //   })
+    // };
+    //
+    // function bcPay(out_trade_no,title,amount,sign,customerId,paymentNo,business,customerNo) {
+    //     BC.err = function(data) {
+    //         //注册错误信息接受
+    //         console.log(data)
+    //         showWrong(data["ERROR"]);
+    //         // $(".open").hide();
+    //     }
+    //     BC.click({
+    //         "title": title,
+    //         "amount": amount,
+    //         "out_trade_no": out_trade_no,               //唯一订单号
+    //         "sign" : sign,
+    //         "openid" : openId,
+    //         // "return_url":"http://www.hao123.com/",
+    //         "instant_channel":"wx",
+    //         "optional": {"customerId": customerId,"paymentNo":paymentNo,"business":business,"customerNo":customerNo}
+    //     },
+    //     {
+    //         wxJsapiFinish : function(res) {
+    //         },
+    //         wxJsapiSuccess:function(res){
+    //             // window.location.href = "./buyCard/payResult.html?result=true";
+	// 			window.location.reload();
+    //         },
+    //         wxJsapiFail:function(res){
+    //             window.location.href = "./buyCard/payResult.html";
+    //         }
+    //     });
+    // }
+
+    var share = {
+        title:"加入花田小憩",
+        imgUrl:'https://htxq.oss-cn-beijing.aliyuncs.com/resources/images/htxq5.0/research_gold.jpg',
+        url:"https://api.htxq.net/h5/WXactivity/buyCard/cardIndex.html?uno=" + uno + "&origin=" + origin,
+        content:"国际名师聚集，一所没有边界的“互联网花艺研究社”。"
+    };
+
+    wx.ready(function(){
+        weixinShare( share.title , share.url , share.imgUrl , share.content );
+    });
+
+    (function(){
+        if (equip == "weixin") {        //为微信浏览器
+            if ( !openId ){
+                var code = getLocationHrefPara("code");
+                if ( code ) {
+                    getWXUserInformation(code);
+                }else{
+                    weixinLogin(0);
+                }
+            }
+        }else{                          //为外部浏览器
+
+        }
+    })();
+
+    /* 支付方法 end*/
+
+    // function boxShow(){//手机号弹窗出现
+    //     if ($("#check").hasClass("checked")) {
+    //         loginScrollTop = $(window).scrollTop();
+    //         $("body,html").css({height:window.innerHeight + "px"}).addClass('fixed100');
+    //         $("#pintuanLogin").show();
+    //     }else{
+    //         $(".shaow_l").fadeIn(1500).fadeOut(1500);
+    //     }
+    // }
+
+    // function boxHide(){//手机号弹窗隐藏
+    //     $("#pintuanLogin").hide();
+    //     $("body,html").css({height:"auto"}).removeClass('fixed100');
+    //     $(window).scrollTop(loginScrollTop);
+    // }
+</script>
+</html>
