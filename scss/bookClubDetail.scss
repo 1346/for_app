@@ -38,6 +38,73 @@ p {
   height: 0;
 }
 
+.book_add_header {
+  width: 100%;
+  height: 1.96rem;
+  padding: 0 0.16rem 0 0.3rem;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  margin-bottom: 0.3rem;
+  margin-top: -0.3rem;
+  font-family: "Helvetica";
+  .add_header_left {
+    height: 0.9rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    img {
+      width: 0.9rem;
+      height: 0.9rem;
+      border-radius: 50%;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .left_txt {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left: 0.2rem;
+      display: inline-block;
+      .txt_name {
+        font-size: 0.3rem;
+        font-weight: bold;
+        color: #323232;
+        span {
+          display: inline-block;
+        }
+        span + span {
+          margin-left: 0.1rem;
+        }
+      }
+      .txt_time {
+        font-size: 0.26rem;
+        color: #979797;
+        margin-top: 0.04rem;
+      }
+    }
+  }
+  .add_header_right {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    img {
+      width: 1.84rem;
+      height: 1.84rem;
+    }
+    .right_val {
+      text-align: center;
+      font-size: 0.26rem;
+      font-weight: bold;
+      color: #ba926f;
+      position: absolute;
+      top: 36%;
+      left: 50%;
+      transform: rotate(-16deg) translate(-50%, -50%);
+      width: 100%;
+    }
+  }
+}
+
 .book_header {
   margin-bottom: 0.3rem;
   padding: 0 0.3rem;
