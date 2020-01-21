@@ -83,8 +83,8 @@ var vm = new Vue({
                         vm.detail = json.data;
                         var reg = /[\r\n]+/g;
                         vm.detail.authorIntro = vm.detail.authorIntro.replace(reg, "<br />");
-                        vm.detail.bookIntro = vm.detail.authorIntro.replace(reg, "<br />");
-                        vm.detail.publishIntro = vm.detail.authorIntro.replace(reg, "<br />");
+                        vm.detail.bookIntro = vm.detail.bookIntro.replace(reg, "<br />");
+                        vm.detail.publishIntro = vm.detail.publishIntro.replace(reg, "<br />");
                     } else {
                         showWrong(json.text);
                     }

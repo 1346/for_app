@@ -23,18 +23,29 @@
 <body>
 <div id="main">
     <div class="card_in_app" v-cloak>
-        <div class="in_header">
+        <div class="in_header" v-if="customerId">
             <img class="header_bg" src="../bookClub/images/card_bg@3x.png" alt="">
             <div class="in_header_t">
                 <img :src="detail.memberIcon" alt="">
                 <div class="t_right">
-                    <div class="right_title">读书卡（年会员）</div>
+                    <div class="right_title">&nbsp;</div>
                     <div class="right_tip">{{ detail.memberName }}</div>
                 </div>
             </div>
             <div class="in_header_b">
                 <div class="b_id">读书卡号码：{{ !detail.isMember ? "暂无" : detail.cardNumber }}</div>
                 <div class="b_time">会员身份：{{ !detail.isMember ? "未开通" : (detail.isExpire ? "已过期" : detail.membership) }}</div>
+            </div>
+        </div>
+        <div class="card_header" v-else>
+            <img class="header_bg" src="../bookClub/images/qian@3x.png" alt="">
+            <div class="header_content">
+                <div class="content_title">&nbsp;</div>
+                <div class="content_tip">听小花老师每周解读一本优质好书</div>
+                <div class="content_price">
+                    <span class="price_val">￥388</span>
+                    <span class="price_txt">/年</span>
+                </div>
             </div>
         </div>
         <div class="in_app_content">
@@ -46,15 +57,19 @@
     var vm = new Vue({
         el: "#main",
         data: {
-            detail: ''
+            detail: '',
+            customerId: ''
         },
         created: function() {
-            this.getDetail()
+            this.customerId = getLocationHrefPara2("customerId");
+            if (this.customerId) {
+                this.getDetail(this.customerId);
+            }
         },
         methods: {
-            getDetail: function() {
+            getDetail: function(customerId) {
                 $.ajax({
-                    url: window.location.origin + "/cactus/bookClub/query/member/card/detail?customerId=" + getLocationHrefPara2("customerId"),
+                    url: window.location.origin + "/cactus/bookClub/query/member/card/detail?customerId=" + customerId,
                     type: 'GET',
                     dataType: 'json',
                     data: {}

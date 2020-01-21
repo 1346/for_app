@@ -75,7 +75,7 @@
             <div class="fixed_txt fl">{{ detail.pageFooterTitle }}</div>
             <div class="fixed_btn fr">立即购买</div>
         </div>
-        <audio ref="audio" loop :src="audioSrc"></audio>
+        <audio ref="audio" loop :src="audioSrc" v-if="audioSrc"></audio>
     </div>
 </div>
 <script type="text/javascript" preload="auto" src="../js/bookClubDetail.js"></script>

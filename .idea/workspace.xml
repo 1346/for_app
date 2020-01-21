@@ -2,74 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cba96e7-6317-4e17-a7de-7bb429e97630" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/.sass-cache/341091fc39ef1a31c8d5e69c4e48a5388b69a42c/bookClubGroupIndex.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookBuyCard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/.sass-cache/d3bee7adb558ed8dde30198e1b39f8eb07ced41a/bookBuyCard.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/.sass-cache/d3bee7adb558ed8dde30198e1b39f8eb07ced41a/cardComponent.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/bookClubCall.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/bookClubCardInApp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/bookClubIntroduce.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/bookClubList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/bookClubStatement.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/bookClubTeacher.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/css/bookBuyCard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/css/bookBuyCard.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/css/cardComponent.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/css/cardComponent.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/css/index.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/css/mui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/card_bg@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/card_bg@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/check_statement@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/check_statement@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/fail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/group_2@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/head.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/header.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/ljgm@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/ljgm@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/phone_ele.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/qian@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/qian@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/share.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/study.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/study_success.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/success_t.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/teacher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/uncheck_statement@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/uncheck_statement@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/work_bottom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/images/work_top.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/js/cardComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/js/cardStatement.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/js/login_public_750.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/js/login_public_750_v5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/js/mui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/scss/bookBuyCard.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClub/scss/cardComponent.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClubGroupFail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClubGroupIndex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookClubGroupSuccess.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bookClubGroupIndex.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bookClubGroupIndex.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/public_css/element-index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/ali_oss_update_test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/bookClubGroupIndex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/learning_group.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/group.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/introduce_2019_11_09.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/public_js/aliyun-oss-sdk.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/public_js/element-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/public_js/jquery-3.4.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/public_js/vue.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scss/bookClubGroupIndex.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/341091fc39ef1a31c8d5e69c4e48a5388b69a42c/bookClubDetail.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/341091fc39ef1a31c8d5e69c4e48a5388b69a42c/bookClubDetail.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bookClubDetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/bookClubDetail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bookClubDetail.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/bookClubDetail.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookBuyCard.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookBuyCard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookClub/bookClubCardInApp.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookClub/bookClubCardInApp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookClub/images/card_bg@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/bookClub/images/card_bg@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookClub/images/card_bg@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/bookClub/images/card_bg@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookClub/images/qian@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/bookClub/images/qian@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookClub/images/qian@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/bookClub/images/qian@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookClubGroupFail.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookClubGroupFail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookClubGroupSuccess.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookClubGroupSuccess.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/bookClubDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/bookClubDetail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/bookClubDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/bookClubDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/bookClubDetail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/bookClubDetail.scss" afterDir="false" />
     </list>
     <ignored path="for_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -86,38 +29,7 @@
     <favorites_list name="for_app" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bookClubGroupIndex.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="109" column="8" selection-start-line="109" selection-start-column="8" selection-end-line="109" selection-end-column="8" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bookBuyCard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="35" column="41" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bookClub/scss/bookBuyCard.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="64" column="30" lean-forward="true" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -130,7 +42,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>立即参加</find>
       <find>beePay</find>
       <find>collage_fail</find>
       <find>re</find>
@@ -158,8 +69,9 @@
       <find>研究社</find>
       <find>-webkit-text-size-adjust</find>
       <find>banner</find>
-      <find>share</find>
       <find>content_price</find>
+      <find>share</find>
+      <find>失败</find>
     </findStrings>
     <replaceStrings>
       <replace>花田小憩</replace>
@@ -216,17 +128,17 @@
         <option value="$PROJECT_DIR$/html/ali_oss_update_test.html" />
         <option value="$PROJECT_DIR$/html/getAdminAudioListPage.html" />
         <option value="$PROJECT_DIR$/bookClub/scss/cardComponent.scss" />
-        <option value="$PROJECT_DIR$/bookClub/bookClubCardInApp.html" />
-        <option value="$PROJECT_DIR$/js/bookClubDetail.js" />
-        <option value="$PROJECT_DIR$/html/bookClubDetail.html" />
         <option value="$PROJECT_DIR$/bookClub/bookClubTeacher.html" />
         <option value="$PROJECT_DIR$/bookClub/bookClubIntroduce.html" />
         <option value="$PROJECT_DIR$/bookClubGroupIndex.html" />
-        <option value="$PROJECT_DIR$/bookClubGroupFail.html" />
-        <option value="$PROJECT_DIR$/bookClubGroupSuccess.html" />
         <option value="$PROJECT_DIR$/scss/bookClubDetail.scss" />
-        <option value="$PROJECT_DIR$/bookBuyCard.html" />
         <option value="$PROJECT_DIR$/bookClub/scss/bookBuyCard.scss" />
+        <option value="$PROJECT_DIR$/js/bookClubDetail.js" />
+        <option value="$PROJECT_DIR$/html/bookClubDetail.html" />
+        <option value="$PROJECT_DIR$/bookClubGroupSuccess.html" />
+        <option value="$PROJECT_DIR$/bookClubGroupFail.html" />
+        <option value="$PROJECT_DIR$/bookBuyCard.html" />
+        <option value="$PROJECT_DIR$/bookClub/bookClubCardInApp.html" />
       </list>
     </option>
   </component>
@@ -258,7 +170,7 @@
               <item name="for_app" type="b2602c69:ProjectViewProjectNode" />
               <item name="for_app" type="462c0819:PsiDirectoryNode" />
               <item name="bookClub" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -394,7 +306,7 @@
       <workItem from="1578988548288" duration="33557000" />
       <workItem from="1579399057203" duration="599000" />
       <workItem from="1579401952077" duration="40359000" />
-      <workItem from="1579513842165" duration="28784000" />
+      <workItem from="1579513842165" duration="35286000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1566528560309</created>
@@ -403,11 +315,18 @@
       <option name="project" value="LOCAL" />
       <updated>1566528560310</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="读书卡直接购买&amp;&amp;拼团&amp;&amp;拼团状态等各种页面+接口">
+      <created>1579613576400</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579613576400</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="342064000" />
+    <option name="totallyTimeSpent" value="348566000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -434,12 +353,12 @@
       <window_info anchor="bottom" id="找到" order="7" weight="0.32832617" />
       <window_info anchor="bottom" id="运行" order="8" />
       <window_info anchor="bottom" id="版本控制" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49947312" weight="0.3197425" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50052685" side_tool="true" weight="0.3197425" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49894625" weight="0.3197425" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50105375" side_tool="true" weight="0.3197425" />
       <window_info anchor="bottom" id="调试" order="12" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info active="true" anchor="bottom" id="Version Control" order="14" visible="true" weight="0.32832617" />
-      <window_info anchor="bottom" id="消息" order="15" />
+      <window_info anchor="bottom" id="消息" order="15" weight="0.32939914" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -484,26 +403,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="读书卡直接购买&amp;&amp;拼团&amp;&amp;拼团状态等各种页面+接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="读书卡直接购买&amp;&amp;拼团&amp;&amp;拼团状态等各种页面+接口" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/html/postShare.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="8" selection-end-column="45" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/agent_recruitment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/bookClubGroupIndex.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -592,31 +495,9 @@
     <entry file="file://$PROJECT_DIR$/js/public_js/aliyun-oss-sdk.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/postShare.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-557" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/stationShare.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3135" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/bookClubGroupIndex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="40" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="55" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/ali_oss_update_test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="13" column="15" lean-forward="true" selection-end-line="68" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/public_js/element-index.js">
@@ -669,13 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/bookClubDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/bookClubDetail.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -712,13 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bookClub/bookClubCardInApp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bookClub/bookClubList.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -740,20 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bookClubGroupFail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="265" column="53" selection-start-line="265" selection-start-column="53" selection-end-line="265" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookClubGroupSuccess.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="270" column="53" selection-start-line="270" selection-start-column="53" selection-end-line="270" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/bookClubDetail.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -764,37 +617,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bookClub/scss/bookBuyCard.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="64" column="30" lean-forward="true" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/postShare.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-513" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ali_oss_update_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="15" lean-forward="true" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/html/bookClubDetail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+        <state relative-caret-position="413">
+          <caret line="71" column="61" selection-start-line="71" selection-start-column="61" selection-end-line="71" selection-end-column="61" />
           <folding>
             <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/bookClubDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="86" column="71" selection-start-line="86" selection-start-column="59" selection-end-line="86" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookClubGroupFail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="42" column="59" lean-forward="true" selection-start-line="42" selection-start-column="59" selection-end-line="42" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookClubGroupSuccess.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="75" column="69" selection-start-line="75" selection-start-column="69" selection-end-line="75" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bookClubGroupIndex.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="109" column="8" selection-start-line="109" selection-start-column="8" selection-end-line="109" selection-end-column="8" />
+        <state relative-caret-position="390">
+          <caret line="90" column="60" lean-forward="true" selection-start-line="90" selection-start-column="60" selection-end-line="90" selection-end-column="65" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bookBuyCard.html">
+    <entry file="file://$PROJECT_DIR$/html/bookClubGroupIndex.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="35" column="41" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="41" />
+        <state relative-caret-position="266">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bookClub/scss/bookBuyCard.scss">
+    <entry file="file://$PROJECT_DIR$/bookClub/images/card_bg@3x.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookClub/images/qian@3x.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookBuyCard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="64" column="30" lean-forward="true" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+        <state relative-caret-position="213">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="40" selection-end-column="14" />
+          <folding>
+            <element signature="e#1808#1814#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookClub/bookClubCardInApp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="26" column="82" lean-forward="true" selection-start-line="26" selection-start-column="82" selection-end-line="26" selection-end-column="82" />
+          <folding>
+            <element signature="e#1644#1650#1" expanded="true" />
+            <element signature="e#2261#2267#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
