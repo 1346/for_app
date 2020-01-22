@@ -23,18 +23,18 @@
     <div v-cloak>
         <div class="book_add_header clearfix" v-if="type !== 'inApp'">
             <div class="fl add_header_left">
-                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1579631318902&di=3817f2a34a1b1c320a799ceb933ef2db&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201803%2F03%2F2018030391709_zuld8.thumb.700_0.jpeg" alt="">
+                <img :src="detail.userHead" alt="">
                 <div class="left_txt">
                     <div class="txt_name">
-                        <span>Rebecca</span>
-                        <span>正在读第118本书</span>
+                        <span>{{ detail.userName }}和的</span>
+                        <span>正在读第{{ detail.readBook }}999本书</span>
                     </div>
-                    <div class="txt_time">2020-01-03</div>
+                    <div class="txt_time">{{ detail.readTime }}</div>
                 </div>
             </div>
             <div class="fr add_header_right">
                 <img src="../images/book_detail_badge@3x.png" alt="">
-                <div class="right_val">第118本</div>
+                <div class="right_val">第{{ detail.readBook }}999本</div>
             </div>
         </div>
         <div class="book_header" v-if="type !== 'inApp'">

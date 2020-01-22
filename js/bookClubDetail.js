@@ -34,7 +34,7 @@ var vm = new Vue({
         getData: function() {
             var _this = this;
             $.ajax({
-                url: window.location.origin + "/cactus/bookClub/detail/wap?bookId=" + getLocationHrefPara2("bookId"),
+                url: window.location.origin + "/cactus/bookClub/detail/wap?bookId=" + getLocationHrefPara2("bookId") + "&customerId=" + getLocationHrefPara2("customerId"),
                 type: 'GET',
                 dataType: 'json',
                 data: {}
