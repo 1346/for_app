@@ -9,11 +9,13 @@ var vm = new Vue({
         playTime: '00:00',
         audioSrc: '',
         type: '',
+        customerId: '',
         detail: ''
     },
 
     mounted: function() {
         this.type = getLocationHrefPara2("type");
+        this.customerId = getLocationHrefPara2("customerId");
         if (this.type == 'inApp') {
             this.getDetailForApp();
         } else {
