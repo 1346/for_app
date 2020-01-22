@@ -14,8 +14,8 @@
     </script>
     <script type="text/javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/vue.min.js"></script>
     <script type="text/javascript" src="./js/login_public_750.js"></script>
-    <script src="//cdn.bootcss.com/eruda/1.5.2/eruda.min.js"></script>
-    <script>eruda.init();</script>
+<!--    <script src="//cdn.bootcss.com/eruda/1.5.2/eruda.min.js"></script>-->
+<!--    <script>eruda.init();</script>-->
     <style type="text/css">
         body {
             margin: 0;
@@ -25,7 +25,7 @@
         }
         .introduce_content {
             width: 100%;
-            margin-bottom: 1.2rem;
+            /*margin-bottom: 1.2rem;*/
         }
         .no_footer {
             margin-bottom: 0 !important;
@@ -73,8 +73,12 @@
 <body>
 <div id="main">
     <div class="introduce">
-        <div class="introduce_content" :class="{ no_footer: !showFooter }">
-            <img src="../images/introduce_2019_11_09.jpg" alt="">
+<!--        <div class="introduce_content" :class="{ no_footer: !showFooter }">-->
+        <div class="introduce_content">
+            <img src="./images/book_introduce_img_01.jpg" alt="">
+            <img src="./images/book_introduce_img_02.jpg" alt="">
+            <img src="./images/book_introduce_img_03.jpg" alt="">
+            <img src="./images/book_introduce_img_04.jpg" alt="">
         </div>
         <div class="introduce_footer clearfix" v-if="showFooter">
             <div class="footer_left" @click="groupPay">￥298/年 拼团购买</div>
