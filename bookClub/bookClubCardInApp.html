@@ -8,7 +8,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <link rel="stylesheet" href="../bookClub/css/bookBuyCard.css?t=1">
+    <link rel="stylesheet" href="../bookClub/css/bookBuyCard.css?t=2">
     <link rel="stylesheet" href="../bookClub/css/cardComponent.css">
     <script>
         var now = new Date().getTime();
@@ -24,11 +24,13 @@
 <div id="main">
     <div class="card_in_app" v-cloak>
         <div class="in_header" v-if="customerId">
-            <img class="header_bg" src="../bookClub/images/card_bg@3x.png" alt="">
+            <img class="header_bg" src="../bookClub/images/hou@3x.png" alt=""  v-if="detail.isGuest">
+            <img class="header_bg" src="../bookClub/images/card_bg@3x.png" alt="" v-else>
             <div class="in_header_t">
                 <img :src="detail.memberIcon" alt="">
                 <div class="t_right">
-                    <div class="right_title">&nbsp;</div>
+                    <div class="right_title" v-if="detail.isGuest">学习卡 <span class="right_binding" @click="guestBinding">绑定手机号登录</span></div>
+                    <div class="right_title" v-else>&nbsp;</div>
                     <div class="right_tip">{{ detail.memberName }}</div>
                     <div class="right_guest" v-if="detail.isGuest">您可以把游客身份的读书卡剩余天数绑定到手机账号，绑定后可以在其他设备上观看</div>
                 </div>
@@ -82,6 +84,10 @@
                             showWrong(json.text);
                         }
                     });
+            },
+
+            guestBinding: function () {
+                javaFunction('16','','')
             }
         }
     })

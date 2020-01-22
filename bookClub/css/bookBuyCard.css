@@ -175,17 +175,35 @@ body {
       font-size: 0.5rem;
       color: #573C25;
       line-height: 0.7rem;
-      font-family: "songti"; }
+      font-family: "songti";
+      height: 0.7rem; }
     .card_in_app .in_header .in_header_t .t_right .right_tip {
       font-size: 0.28rem;
       color: #573C25;
       font-family: "兰亭黑";
-      margin-top: 0.1rem; }
+      margin-top: 0.1rem;
+      margin-left: 0.02rem; }
     .card_in_app .in_header .in_header_t .t_right .right_guest {
       color: #fcfcfc;
       font-size: 0.22rem;
       max-width: 4.6rem;
-      margin-top: 0.04rem; }
+      margin-top: 0.04rem;
+      line-height: 1.2; }
+    .card_in_app .in_header .in_header_t .t_right .right_binding {
+      border-radius: 0.04rem;
+      color: #573C25;
+      font-size: 0.22rem;
+      background-color: #FFEBDB;
+      height: 0.44rem;
+      width: 1.9rem;
+      text-align: center;
+      border: none;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      line-height: 0.48rem;
+      vertical-align: top;
+      display: inline-block; }
 .card_in_app .in_header .in_header_b {
   position: absolute;
   bottom: 0.65rem;

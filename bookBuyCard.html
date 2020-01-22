@@ -22,8 +22,8 @@
     <script src="bookClub/js/cardComponent.js"></script>
     <script src="bookClub/js/cardStatement.js"></script>
 
-    <script src="//cdn.bootcss.com/eruda/1.5.2/eruda.min.js"></script>
-    <script>eruda.init();</script>
+<!--    <script src="//cdn.bootcss.com/eruda/1.5.2/eruda.min.js"></script>-->
+<!--    <script>eruda.init();</script>-->
 </head>
 <body>
 <div id="main">
@@ -46,8 +46,8 @@
                     <img v-if="checked" src="bookClub/images/check_statement@3x.png" alt="">
                     <img v-else src="bookClub/images/uncheck_statement@3x.png" alt="">
                 </span>
-                <span>我自愿同意购买</span>
-                <span class="text_click" @click="showStatement = true">读书卡购买声明</span>
+                <span>我自愿同意</span>
+                <span class="text_click" @click="showStatement = true">读书卡服务协议</span>
             </p>
 <!--            <div class="footer_btn" @click="buyCard">-->
 <!--                <span>立即购买</span>-->
@@ -113,9 +113,9 @@
             }
 
             var share = {
-                title:"加入花田小憩",
+                title:"加入花田小憩读书会",
                 imgUrl:'https://htxq.oss-cn-beijing.aliyuncs.com/resources/images/htxq5.0/research_gold.jpg',
-                url:"https://api.htxq.net/h5/WXactivity/buyCard/cardIndex.html?uno=" + this.uno + "&origin=" + this.origin,
+                url:"https://api.htxq.net/h5/WXactivity/bookClub/bookClubIntroduce.html?uno=" + this.uno + "&origin=" + this.origin,
                 content:"国际名师聚集，一所没有边界的“互联网花艺研究社”。"
             };
             wx.ready(function(){
@@ -126,7 +126,7 @@
             buyCard: function () {
                 if (this.checked) {
                     this.openId = sessionStorage.getItem("HTXQopenId") == null ? "" : sessionStorage.getItem("HTXQopenId");
-                    console.log("openID" +this.openId);
+                    this.userId	= getCookie("user");
                     if (this.userId) {
                         $.ajax({
                             url: location.origin + this.url + "?customerId=" + this.userId + "&&token=" + (localStorage.getItem("HTXQToken") || this.token) + "&&uno=" + this.uno + "&origin=" + this.origin + "&openId=" + this.openId,
@@ -175,7 +175,7 @@
                 });
             }
         }
-    })
+    });
 </script>
 </body>
 </html>

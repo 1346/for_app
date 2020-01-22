@@ -216,18 +216,37 @@ body {
           color: #573C25;
           line-height: 0.7rem;
           font-family: "songti";
+          height: 0.7rem;
         }
         .right_tip {
           font-size: 0.28rem;
           color: #573C25;
           font-family: "兰亭黑";
           margin-top: 0.1rem;
+          margin-left: 0.02rem;
         }
         .right_guest {
           color: #fcfcfc;
           font-size: 0.22rem;
           max-width: 4.6rem;
           margin-top: 0.04rem;
+          line-height: 1.2;
+        }
+        .right_binding {
+          border-radius: 0.04rem;
+          color: #573C25;
+          font-size: 0.22rem;
+          background-color: #FFEBDB;
+          height: 0.44rem;
+          width: 1.9rem;
+          text-align: center;
+          border: none;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          line-height: 0.48rem;
+          vertical-align: top;
+          display: inline-block;
         }
       }
     }
