@@ -13,7 +13,7 @@ var vm = new Vue({
         detail: ''
     },
 
-    mounted: function() {
+    mounted: function () {
         this.type = getLocationHrefPara2("type");
         this.customerId = getLocationHrefPara2("customerId");
         if (this.type == 'inApp') {
@@ -33,16 +33,16 @@ var vm = new Vue({
     },
 
     methods: {
-        getData: function() {
+        getData: function () {
             var _this = this;
             $.ajax({
-                url: window.location.origin + "/cactus/bookClub/detail/wap?bookId=" + getLocationHrefPara2("bookId") + "&customerId=" + getLocationHrefPara2("customerId"),
-                type: 'GET',
-                dataType: 'json',
-                data: {}
-            })
-                .done(function(json) {
-                    if ( json.code == "000000" ) {
+                    url: window.location.origin + "/cactus/bookClub/detail/wap?bookId=" + getLocationHrefPara2("bookId") + "&customerId=" + getLocationHrefPara2("customerId"),
+                    type: 'GET',
+                    dataType: 'json',
+                    data: {}
+                })
+                .done(function (json) {
+                    if (json.code == "000000") {
                         vm.detail = json.data;
                         var reg = /[\r\n]+/g;
                         vm.detail.authorIntro = vm.detail.authorIntro.replace(reg, "<br />");
@@ -67,21 +67,30 @@ var vm = new Vue({
                             }
                             _this.totalTime = minutes + ":" + seconds;
                         }
+                        var share = {
+                            title: `推荐一本好书：${json.data.title}`,
+                            imgUrl: json.data.bookImage,
+                            url: '',
+                            content: json.data.intro
+                        };
+                        wx.ready(function () {
+                            weixinShare(share.title, share.url, share.imgUrl, share.content);
+                        })
                     } else {
                         showWrong(json.text);
                     }
                 });
         },
 
-        getDetailForApp: function() {
+        getDetailForApp: function () {
             $.ajax({
-                url: window.location.origin + "/cactus/bookClub/basicIntro?bookId=" + getLocationHrefPara2("bookId"),
-                type: 'GET',
-                dataType: 'json',
-                data: {}
-            })
-                .done(function(json) {
-                    if ( json.code == "000000" ) {
+                    url: window.location.origin + "/cactus/bookClub/basicIntro?bookId=" + getLocationHrefPara2("bookId"),
+                    type: 'GET',
+                    dataType: 'json',
+                    data: {}
+                })
+                .done(function (json) {
+                    if (json.code == "000000") {
                         vm.detail = json.data;
                         var reg = /[\r\n]+/g;
                         vm.detail.authorIntro = vm.detail.authorIntro.replace(reg, "<br />");
@@ -106,13 +115,13 @@ var vm = new Vue({
         playAudio: function () {
             this.audioTimeUpdate();
             var audio = this.$refs.audio;
-            if(audio !== null){
+            if (audio !== null) {
                 //检测播放是否已暂停.audio.paused 在播放器播放时返回false.
                 vm.isPlay = audio.paused;
-                if(audio.paused)                     {
-                    audio.play();//audio.play();// 这个就是播放
-                }else{
-                    audio.pause();// 这个就是暂停
+                if (audio.paused) {
+                    audio.play(); //audio.play();// 这个就是播放
+                } else {
+                    audio.pause(); // 这个就是暂停
                 }
             }
             // this.$nextTick(function () {
@@ -143,9 +152,9 @@ var vm = new Vue({
         add: function () {
             // 获取音频的当前播放时间和总时间
             var current_t = parseInt(this.$refs.audio.currentTime);
-            var total_t = parseInt( this.$refs.audio.duration);
+            var total_t = parseInt(this.$refs.audio.duration);
             // 将当前播放时间+15秒，如果结果大于总时间，则直接取总时间
-            this.$refs.audio.currentTime = (current_t + 15) >= total_t ? total_t : ( current_t + 15 );
+            this.$refs.audio.currentTime = (current_t + 15) >= total_t ? total_t : (current_t + 15);
 
         },
 
@@ -157,7 +166,7 @@ var vm = new Vue({
             // 获取音频的当前播放时间
             var current_t = parseInt(this.$refs.audio.currentTime);
             // 判断当前的播放时间-15秒后是否小于0
-            this.$refs.audio.currentTime = (current_t - 15) <= 0 ? 0 : ( current_t - 15 );
+            this.$refs.audio.currentTime = (current_t - 15) <= 0 ? 0 : (current_t - 15);
         },
 
         /**
@@ -193,7 +202,7 @@ var vm = new Vue({
         /**
          * 设置进度条长度
          */
-        setProgress:function (val) {
+        setProgress: function (val) {
             if (val < 0 || val > 100) {
                 return
             }

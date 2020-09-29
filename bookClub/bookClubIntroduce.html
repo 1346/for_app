@@ -13,6 +13,7 @@
         window.onresize = function(){ document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5 + "px" }
     </script>
     <script type="text/javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/vue.min.js"></script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script type="text/javascript" src="./js/login_public_750.js"></script>
 <!--    <script src="//cdn.bootcss.com/eruda/1.5.2/eruda.min.js"></script>-->
 <!--    <script>eruda.init();</script>-->
@@ -81,8 +82,11 @@
             <img src="./images/book_introduce_img_04.jpg" alt="">
         </div>
         <div class="introduce_footer clearfix" v-if="showFooter">
-            <div class="footer_left" @click="groupPay">￥388/年 拼团购买</div>
-            <div class="footer_right" @click="directPay">￥388/年 点击购买</div>
+            <!-- <div class="footer_left" @click="groupPay">￥388/年 拼团购买</div>
+            <div class="footer_right" @click="directPay">￥388/年 点击购买</div> -->
+            <div class="footer_left" @click="directPay">￥328 直接购买</div>
+            <!-- <div class="footer_right" @click="groupPay">￥298拼团 买一赠一</div> -->
+            <div class="footer_right" @click="goDownload">下载APP</div>
         </div>
     </div>
 </div>
@@ -98,22 +102,34 @@
             showFooter: true
         },
         created: function() {
-            this.userId = getCookie("user");
-            if (this.userId) {
-                this.groupUrl = "../bookBuyCard.html?from=group&uno=" + this.uno + "&origin=" + this.origin + "&orderId=" + this.orderId;
-            }
             this.uno = getLocationHrefPara2("uno");
+            this.userId = getCookie("user");
             this.origin = getLocationHrefPara2("origin");
             this.orderId = getLocationHrefPara2("orderId");
             if (getLocationHrefPara2("from") == 'look') {
                 this.showFooter = false;
             }
+            if (this.userId) {
+                this.groupUrl = "../bookBuyCard.html?from=group&uno=" + this.uno + "&origin=" + this.origin + "&orderId=" + this.orderId;
+            }
             this.getUserId(this.userId);
+            var share = {
+                // title:"加入花田小憩读书会",
+                title:"花艺师的40本好书，每周一本",
+                imgUrl:'https://static.htxq.net/Hsx/Public/Image/Upload/20200215204433588.jpg',
+                url:"https://api.htxq.net/h5/WXactivity/bookClub/bookClubIntroduce.html?uno=" + this.uno + "&origin=" + this.origin,
+                // content:"国际名师聚集，一所没有边界的“互联网花艺研究社”。"
+                content:"全年40本，每周一本好书：花艺、花艺、当代艺术。"
+            };
+            wx.ready(function(){
+                weixinShare( share.title , share.url , share.imgUrl , share.content );
+            })
         },
         methods: {
             getUserId: function (userId) {
                 if (userId) {
                     var token = localStorage.getItem("HTXQToken");
+                    var _this = this;
                     $.ajax({
                         url: location.protocol + "//" + window.location.host + "/cactus/bookClub/query/trade/group/check?customerId=" + userId + "&token=" + token,
                         type: 'GET',
@@ -122,10 +138,10 @@
                             console.log(result);
                             if(result.code == "000000"){
 //                     window.location.href = location.protocol + "//" + window.location.host + "/h5/WXactivity/groupbuy/collage_join.html?uno=" + uno + "&origin=" + origin + "&orderId=" + result.data.orderId;
-                                vm.groupUrl = "../bookBuyCard.html?from=group&uno=" + this.uno + "&origin=" + this.origin + "&orderId=" + this.orderId;
+                                vm.groupUrl = "../bookBuyCard.html?from=group&uno=" + _this.uno + "&origin=" + _this.origin + "&orderId=" + _this.orderId;
                             }else if(result.code == "110101"){
                                 // 跳转至拼团状态页面
-                                vm.groupUrl = "../bookClubGroupIndex.html?from=group&uno=" + this.uno + "&origin=" + this.origin + "&orderId=" + result.data.orderId;
+                                vm.groupUrl = "../bookClubGroupIndex.html?from=group&uno=" + _this.uno + "&origin=" + _this.origin + "&orderId=" + result.data.orderId;
                             }
                         },
                         error: function () {
@@ -141,6 +157,10 @@
                 }else{
                     window.location.href = vm.groupUrl;
                 }
+            },
+
+            goDownload: function () {
+                window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.floral.life"
             },
 
             directPay: function () {

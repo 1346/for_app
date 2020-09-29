@@ -29,7 +29,7 @@
             <div class="in_header_t">
                 <img :src="detail.memberIcon" alt="">
                 <div class="t_right">
-                    <div class="right_title" v-if="detail.isGuest">学习卡 <span class="right_binding" @click="guestBinding">绑定手机号登录</span></div>
+                    <div class="right_title" v-if="detail.isGuest">读书卡 <span class="right_binding" @click="guestBinding">绑定手机号登录</span></div>
                     <div class="right_title" v-else>&nbsp;</div>
                     <div class="right_tip">{{ detail.memberName }}</div>
                     <div class="right_guest" v-if="detail.isGuest">您可以把游客身份的读书卡剩余天数绑定到手机账号，绑定后可以在其他设备上观看</div>
@@ -46,7 +46,7 @@
                 <div class="content_title">&nbsp;</div>
                 <div class="content_tip">听小花老师每周解读一本优质好书</div>
                 <div class="content_price">
-                    <span class="price_val">￥388</span>
+                    <span class="price_val">￥328</span>
                     <span class="price_txt">/年</span>
                 </div>
             </div>

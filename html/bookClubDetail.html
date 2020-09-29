@@ -16,7 +16,10 @@
         window.onresize = function(){ document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5 + "px" }
     </script>
     <script type="text/javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/vue.min.js"></script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script type="text/javascript" src="../js/public_js/login_public_750.js"></script>
+    <!-- <script src="//cdn.bootcss.com/eruda/1.5.2/eruda.min.js"></script>
+   <script>eruda.init();</script> -->
 </head>
 <body>
 <div id="main">
@@ -89,7 +92,7 @@
         </div>
         <div class="book_fixed clearfix" @click="goBuy" v-if="type !== 'inApp'">
             <div class="fixed_txt fl">{{ detail.pageFooterTitle }}</div>
-            <div class="fixed_btn fr">立即购买</div>
+            <div class="fixed_btn fr">328元/年</div>
         </div>
         <audio ref="audio" loop :src="audioSrc" v-if="audioSrc"></audio>
     </div>

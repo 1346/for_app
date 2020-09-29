@@ -28,8 +28,8 @@
 				<!--<a href="#">-->
 					<img src="bookClub/images/study.jpg" alt="" class="mui-pull-left mui-radius pull-right" width="123px" height="123px"/>
 					<div class="mui-media-body" id="pull-padding-left">
-						<div class="pull-bottom media-title mui-ellipsis-2">花田小憩【VIP会员学习卡】1年</div>
-						<div class="media-body pull-title mui-ellipsis-2">超过10万价值的职业花艺在线课堂，已有20000人加入</div>
+						<div class="pull-bottom media-title mui-ellipsis-2">花田小憩【读书卡VIP】1年</div>
+						<div class="media-body pull-title mui-ellipsis-2">听小花老师解读，每年40本好书，构建多元化美学思维</div>
 						<div class='mui-ellipsis mui-ell'>
 							<span class="media-size mui-pull-left" id="c_t_price">【2人团】</span>
 							<span class="media-size-price mui-pull-left" id="salePrice">￥</span>
@@ -231,8 +231,9 @@ var host    = window.location.host;
 
     function initial(data){
 
-        $("#salePrice").text(data.salePrice);
-        $("#originPrice").text("￥518");
+        $("#salePrice").text(`￥${data.salePrice}`);
+        // $("#originPrice").text("￥518");
+        $("#originPrice").text(`￥${data.originPrice}`);
         $("#status").text(data.statusTxt);
 
         if(data.statusVal == 1){
@@ -281,9 +282,10 @@ var host    = window.location.host;
         memberContainer._data.members = data.members;
 
 
-        share.title = "最后24小时：拼团花艺学习卡送￥68元曹小花签名新书，仅剩" + (data.limit - data.count) + "位";
-        share.content = "价值10万的全球花艺名师的在线学习卡，拼团进行中";
-        share.url = location.protocol + "//" + window.location.host + "/h5/WXactivity/bookClubGroupSuccess.html?orderId=" + data.orderId + "&uno=" + uno + "&origin=" + origin;
+        // share.title = `拼团仅剩${data.limit - data.count}人「￥298买一赠一」，曹小花《读书会》包年`;
+        // share.content = "2月15日前，拼团买1年送一年，曹小花在线读书会，全年40本！限5000人！";
+        // share.imgUrl = "http://static.htxq.net/Hsx/Public/Image/Upload/20200203104850802.jpg";
+        // share.url = location.protocol + "//" + window.location.host + "/h5/WXactivity/bookClubGroupSuccess.html?orderId=" + data.orderId + "&uno=" + uno + "&origin=" + origin;
 
     }
 
@@ -440,10 +442,10 @@ var host    = window.location.host;
     // }
 
     var share = {
-        title:"加入花田小憩",
-        imgUrl:'https://htxq.oss-cn-beijing.aliyuncs.com/resources/images/htxq5.0/research_gold.jpg',
-        url:"https://api.htxq.net/h5/WXactivity/bookClub/bookClubIntroduce.html?uno=" + uno + "&origin=" + origin,
-        content:"国际名师聚集，一所没有边界的“互联网花艺研究社”。"
+        title:"拼团仅剩0人「￥298买一赠一」，曹小花《读书会》包年",
+        imgUrl:'https://static.htxq.net/Hsx/Public/Image/Upload/20200203104850802.jpg',
+        url:location.protocol + "//" + window.location.host + "/h5/WXactivity/bookClubGroupSuccess.html?orderId=" + orderId + "&uno=" + uno + "&origin=" + origin,
+        content:"2月15日前，拼团买1年送一年，曹小花在线读书会，全年40本！限5000人！"
     };
 
     wx.ready(function(){
