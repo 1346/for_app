@@ -20,8 +20,8 @@
     <script type="text/javascript" charset="utf-8">
         mui.init();
     </script>
-<!--    <script src="//cdn.bootcss.com/eruda/1.5.2/eruda.min.js"></script>-->
-<!--    <script>eruda.init();</script>-->
+   <!-- <script src="//cdn.bootcss.com/eruda/1.5.2/eruda.min.js"></script>
+   <script>eruda.init();</script> -->
 </head>
 <body>
 <div class="box">
@@ -33,7 +33,7 @@
             <img src="bookClub/images/study.jpg" alt="" class="mui-pull-left mui-radius pull-right" width="123px" height="123px"/>
                 <div class="mui-media-body" id="pull-padding-left">
                     <div class="pull-bottom media-title mui-ellipsis-2">花田小憩【读书卡VIP】1年</div>
-                    <div class="media-body pull-title mui-ellipsis-2">听小花老师解读，每年40本好书，打破传统美学认知结构</div>
+                    <div class="media-body pull-title mui-ellipsis-2">听小花老师解读，每年40本好书，构建多元化美学思维</div>
                     <div class='mui-ellipsis mui-ell'>
                         <span class="media-size mui-pull-left" id="c_t_price">【2人团】</span>
                         <span class="media-size-price mui-pull-left" id="salePrice">￥</span>
@@ -94,8 +94,8 @@
     </div>
 </div>
 <footer>
-    <button class="projectile_button join_projectile margin_r" id="join_button">立即参加</button>
-    <button class="projectile_button mui-pull-right" id="projectile_button">邀请好友参团</button>
+    <button class="projectile_button margin_r" id="projectile_button">邀请好友参团</button>
+    <button class="projectile_button join_projectile mui-pull-right" id="join_button">立即参团</button>
 </footer>
 <div class="browser_shadow" id="browser_shadow"
      style="display: none;width: 100%;height: 100%;background: #000;position: fixed;left: 0;top: 0;z-index: 13;background: rgba(0,0,0,0.6) url(bookClub/images/share.png) right top/18rem 5.6rem no-repeat!important;"></div>
@@ -258,8 +258,9 @@
 
     function initial(data) {
 
-        $("#salePrice").text(data.salePrice);
-        $("#originPrice").text("￥518");
+        $("#salePrice").text(`￥${data.salePrice}`);
+        // $("#originPrice").text("￥518");
+        $("#originPrice").text(`￥${data.originPrice}`);
         $("#status").text(data.statusTxt);
 
         if (data.statusVal == 0 || data.statusVal == 1) {
@@ -311,10 +312,11 @@
         memberContainer._data.members = data.members;
 
 
-       share.title = data.salePrice + "元拼团花田小憩读书卡，仅剩" + (data.limit - data.count) + "位";
-        share.content = "价值10万的全球花艺名师的在线学习卡，拼团进行中";
-        // share.url = location.protocol + "//" + window.location.host + "/h5/WXactivity/collage_index.html?orderId=" + data.orderId + "&uno=" + uno + "&origin=" + origin;
-        share.url = location.protocol + "//" + window.location.host + "/h5/WXactivity/bookClub/bookClubGroupIndex.html?orderId=" + data.orderId + "&uno=" + uno + "&origin=" + origin;
+        // share.title = `拼团仅剩${data.limit - data.count}人「￥298买一赠一」，曹小花《读书会》包年`;
+        // share.content = "2月15日前，拼团买1年送一年，曹小花在线读书会，全年40本！限5000人！";
+        // share.imgUrl = "http://static.htxq.net/Hsx/Public/Image/Upload/20200203104850802.jpg";
+        // // share.url = location.protocol + "//" + window.location.host + "/h5/WXactivity/collage_index.html?orderId=" + data.orderId + "&uno=" + uno + "&origin=" + origin;
+        // share.url = location.protocol + "//" + window.location.host + "/h5/WXactivity/bookClubGroupIndex.html?orderId=" + data.orderId + "&uno=" + uno + "&origin=" + origin;
 
     }
 
@@ -487,10 +489,10 @@
 
     // 分享参数
     var share = {
-        title: "加入花田小憩",
-        imgUrl: 'https://htxq.oss-cn-beijing.aliyuncs.com/resources/images/htxq5.0/research_gold.jpg',
-        url: "https://api.htxq.net/h5/WXactivity/bookClub/bookClubIntroduce.html?uno=" + uno + "&origin=" + origin,
-        content: "国际名师聚集，一所没有边界的“互联网花艺研究社”。"
+        title: "拼团仅剩1人「￥298买一赠一」，曹小花《读书会》包年",
+        imgUrl: 'https://static.htxq.net/Hsx/Public/Image/Upload/20200203104850802.jpg',
+        url: location.protocol + "//" + window.location.host + "/h5/WXactivity/bookClubGroupIndex.html?orderId=" + orderId + "&uno=" + uno + "&origin=" + origin,
+        content: "2月15日前，拼团买1年送一年，曹小花在线读书会，全年40本！限5000人！"
     };
 
     wx.ready(function () {

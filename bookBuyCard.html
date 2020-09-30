@@ -34,7 +34,7 @@
                 <div class="content_title">&nbsp;</div>
                 <div class="content_tip">听小花老师每周解读一本优质好书</div>
                 <div class="content_price">
-                    <span class="price_val">￥388</span>
+                    <span class="price_val">{{ from=='group' ? '￥298' : '￥328'  }}</span>
                     <span class="price_txt">/年</span>
                 </div>
             </div>
@@ -54,7 +54,7 @@
 <!--                <img src="bookClub/images/ljgm@3x.png" alt="">-->
 <!--            </div>-->
             <div class="footer_btn" @click="buyCard">
-                <span>购买读书卡 388元/年</span>
+                <span>￥{{ from=='group' ? '298' : '328' }}/年</span>
             </div>
         </div>
     </div>
@@ -114,7 +114,7 @@
 
             var share = {
                 title:"加入花田小憩读书会",
-                imgUrl:'https://htxq.oss-cn-beijing.aliyuncs.com/resources/images/htxq5.0/research_gold.jpg',
+                imgUrl:'https://static.htxq.net/Hsx/Public/Image/Upload/20200215204433588.jpg',
                 url:"https://api.htxq.net/h5/WXactivity/bookClub/bookClubIntroduce.html?uno=" + this.uno + "&origin=" + this.origin,
                 content:"国际名师聚集，一所没有边界的“互联网花艺研究社”。"
             };

@@ -1,6 +1,6 @@
-Vue.component('card-content',{
-    template:`<div class="card_content">
-				<div class="content_dec">每周解读一本优质好书，打破传统认知结构</div>
+Vue.component('card-content', {
+	template: `<div class="card_content">
+				<div class="content_dec">每周解读一本优质好书，构建多元化美学思维</div>
 				<div class="content_body">
 				    <h1>内容介绍</h1>
 				    <p>4大知识体系，构建多元化美学知识</p>
