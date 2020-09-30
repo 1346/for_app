@@ -31,13 +31,16 @@
                 width="100%"
                 poster=""
                 @ended="videoEnd"
+                @pause="videoEnd"
                 style="height: 8.79rem"
                 v-if="isVideo"
                 preload="auto">
         </video>
         <div class="header_video" v-if="isVideo && !isPlay">
             <img class="video_img" :src="detail.coverImage">
-            <img class="video_play" src="../images/bofang@2x.png" alt="" @click="playVideo">
+            <div class="video_play" @click="playVideo">
+                <img src="../images/bofang@2x.png" alt="" style="width: inherit; height: inherit;">
+            </div>
         </div>
         <img class="header_img" :src="detail.coverImage" v-if="!isVideo">
         <div v-if="!isPlay">
