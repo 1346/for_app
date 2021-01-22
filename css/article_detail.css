@@ -367,4 +367,18 @@ img {
 [v-cloak] {
   display: none !important; }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212 !important; }
+    body .header_footer {
+      background-color: #121212 !important; }
+    body .newImageIcon {
+      background-color: #232323 !important; }
+      body .newImageIcon .content_text, body .newImageIcon .content_value {
+        color: rgba(255, 255, 255, 0.56) !important; }
+    body .detail_content p {
+      color: rgba(255, 255, 255, 0.9) !important; }
+    body .footer {
+      color: rgba(255, 255, 255, 0.56) !important; } }
+
 /*# sourceMappingURL=article_detail.css.map */

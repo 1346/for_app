@@ -267,4 +267,20 @@ p {
     font-size: 0.3rem;
     color: #574434; }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212; }
+    body .book_add_header {
+      background-color: #121212; }
+      body .book_add_header .txt_name, body .book_add_header .txt_time {
+        color: rgba(255, 255, 255, 0.9) !important; }
+    body .book_line {
+      background-color: #232323 !important; }
+    body .book_dark_detail {
+      background-color: #121212; }
+      body .book_dark_detail .detail_line {
+        background-color: #393939 !important; }
+      body .book_dark_detail .detail_title, body .book_dark_detail .detail_dec {
+        color: rgba(255, 255, 255, 0.9) !important; } }
+
 /*# sourceMappingURL=bookClubDetail.css.map */

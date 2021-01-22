@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>花田小憩推荐AFA设计名单</title>
+    <link rel="stylesheet" href="../css/gw_afa_mobile.css">
+    <script type="text/javascript" src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/vue.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script src="../js/public_js/public.js"></script>
+    <script language="javascript"
+        src="https://htxq.oss-cn-beijing.aliyuncs.com/resources/js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="../js/public_js/login_public_750.js"></script>
+    <!-- <script src="//cdn.bootcss.com/eruda/1.5.2/eruda.min.js"></script> -->
+    <!-- <script>eruda.init();</script> -->
+</head>
+
+<body>
+    <div id="main">
+        <div v-cloak>
+            <div class="afa-header">花田小憩推荐AFA设计名单</div>
+            <div class="afa-banner">
+                <img src="../images/gw_AFA_banner.png" alt="">
+            </div>
+            <div class="afa-logo">
+                <img src="../images/gw_AFA_logo.png" alt="">
+            </div>
+            <div class="afa-content">
+                美国花艺学院（AFA）创建于1932年，因其卓越的方法而闻名于世;其快速有效的结果。超过22,000名花店的学生在学校的86年裡从这个宝贵的培训中获益。学校培养了所有年龄的雄心勃勃的学生...从10到84岁！学校已经培养了许多第二，甚至一些第三代学生。
+            </div>
+            <div class="afa-list">
+                <div class="afa-list-content" v-for="(item, index) in list" :key="index">
+                    <div class="afa-list-title">{{ item.title }}</div>
+                    <div class="afa-list-card" v-for="(i, ind) in item.list" :key="ind">
+                        <div class="card-head">
+                            <img :src="i.head" alt="">
+                        </div>
+                        <div class="card-body">
+                            <div class="body-cname">{{ i.nameCn }}</div>
+                            <div class="body-ename">{{ i.nameEn }}</div>
+                            <div class="body-time">{{ i.date }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="afa-footer">
+                <div class="footer-slogan">植物美学生活平台</div>
+                <div class="footer-copyright">版权所有：北京云梦美都文化传播有限公司</div>
+                <div class="footer-record">增值电信业务经营许可证：京B2-20160177   |   京ICP备15047469号-1
+                    京公网安备 11010502032984号</div>
+            </div>
+            <div class="afa-float">
+                <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.floral.life">
+                    <img src="../images/download_app.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#main",
+            data() {
+                return {
+                    list: []
+                }
+            },
+            created() {
+                this.getList();
+                var share = {
+                    title: "",
+                    imgUrl: 'http://static.htxq.net/Hsx/Public/Image/Upload/20201125151930479.jpg',
+                    url: '',
+                    content: "美国花艺学院（AFA）创建于1932年，因其卓越的方法而闻名于世;其快速有效的结果。超过22,000名花店的学生在学校的86年裡从这个宝贵的培训中获益。学校培养了所有年龄的雄心勃勃的学生...从10到84岁！学校已经培养了许多第二，甚至一些第三代学生。"
+                };
+                wx.ready(function () {
+                    weixinShare(share.title, share.url, share.imgUrl, share.content);
+                })
+            },
+            methods: {
+                getList() {
+                    var _this = this;
+                    $.ajax({
+                        url: window.location.origin + '/cactus/researchCommunity/designer/all/list',
+                        type: 'GET',
+                        dataType: 'json',
+                        data: {}
+                    })
+                        .done(function (json) {
+                            if (json.code == "000000") {
+                                if (json.data.professorList[0].val.length > 0) {
+                                    _this.list.push({ title: "教授 / Professor", list: json.data.professorList[0].val })
+                                }
+                                if (json.data.lecturerList[0].val.length > 0) {
+                                    _this.list.push({ title: "讲师 / Lecturer", list: json.data.lecturerList[0].val })
+                                }
+                                if (json.data.designerList[0].val.length > 0) {
+                                    _this.list.push({ title: "花艺师 / Academic", list: json.data.designerList[0].val })
+                                }
+                            } else {
+                                showWrong(json.text);
+                            }
+                        });
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

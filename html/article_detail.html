@@ -18,6 +18,8 @@
     <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
     <script type="text/javascript" src="../js/public_js/login_public_750.js"></script>
     <link rel="stylesheet" href="../css/article_detail.css?t=1568997382401" />
+    <!-- <script src="//cdn.bootcss.com/eruda/1.5.2/eruda.min.js"></script> -->
+    <!-- <script>eruda.init();</script> -->
 </head>
 <body>
 <div id="main" v-cloak>
@@ -94,17 +96,20 @@
     <div class="newImageIcon" :class="{ isShareNew: isShare }" v-if="difficulty !== 0 && curing !== 0 && humidity !== 0">
         <div class="icon_body">
             <div class="icon_content">
-                <img src="../images/difficulty@3x.png" alt="">
+                <img src="../images/difficulty_dark.png" alt="" v-if="isDark">
+                <img src="../images/difficulty@3x.png" alt="" v-else>
                 <div class="content_value difficulty_value">{{ difficulty >= 31 ? difficulty > 60 ? "难" : "中" : "易" }}</div>
                 <div class="content_text">难度系数</div>
             </div>
             <div class="icon_content">
-                <img src="../images/curing@3x.png" alt="">
+                <img src="../images/curing_dark.png" alt="" v-if="isDark">
+                <img src="../images/curing@3x.png" alt="" v-else>
                 <div class="content_value curing_value">{{ curing }}</div>
                 <div class="content_text">养护指数</div>
             </div>
             <div class="icon_content">
-                <img src="../images/humidity@3x.png" alt="">
+                <img src="../images/humidity_dark.png" alt="" v-if="isDark">
+                <img src="../images/humidity@3x.png" alt="" v-else>
                 <div class="content_value humidity_value">
                     <span class="value">{{ humidity }}</span>
                     <span class="value_tip">%</span>
@@ -136,6 +141,6 @@
         <img src="../images/download_app.png" @click="" alt="">
     </a>
 </div>
-<script type="text/javascript" src="../js/article_detail.js?t=1573057367050"></script>
+<script type="text/javascript" src="../js/article_detail.js"></script>
 </body>
 </html>

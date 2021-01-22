@@ -146,6 +146,21 @@
         .list-num {
             color: #cb5353;
         }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212 !important;
+            }
+            .rules-header, .detail-header {
+                color: rgba(255, 255, 255, 0.9) !important;
+            }
+            .rules-content, .list {
+                color: rgba(255, 255, 255, 0.56) !important;
+            }
+            .empty {
+                background-color: rgba(35, 35, 35, 1);
+                border-color: rgba(57, 57, 57, 1);
+            }
+        }
     </style>
 </head>
 
@@ -224,7 +239,12 @@
               },
                 goApp() {
                     if (judegEquipment() == 'ios') {
-                        javaFunction('24', '', '')
+                        if (getLocationHrefPara2('version')) {
+                            const arr = { 'type': '24', 'idStr': '', 'otherStr': '' };
+                            window.webkit.messageHandlers.javaFunction.postMessage(arr)   
+                        } else {
+                            javaFunction('24', '', '')   
+                        }
                     } else if (judegEquipment() == 'android') {
                         window.Android.operation(2)
                     }

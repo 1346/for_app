@@ -98,3 +98,18 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212 !important;
+    .advisory_card {
+      background-color: #232323 !important;
+    }
+    .card_name, .phone_number, .weChat_number, .workTime_number {
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+    .phone_title, .weChat_title, .workTime_title, .advisory_footer {
+      color: rgba(255, 255, 255, 0.56) !important;
+    }
+  }
+}

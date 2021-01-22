@@ -79,7 +79,7 @@
             </div>
         </div>
         <div class="book_line" v-if="type !== 'inApp'"></div>
-        <div class="book_detail" :class="{ in_app_detail: type == 'inApp' }">
+        <div class="book_detail book_dark_detail" :class="{ in_app_detail: type == 'inApp' }">
             <img class="detail_img" :src="detail.coverImage" alt="">
             <p class="detail_title">作者介绍</p>
             <p class="detail_dec" v-html="detail.authorIntro"></p>

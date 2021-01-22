@@ -78,4 +78,14 @@ body {
   left: 50%;
   transform: translateX(-50%); }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212 !important; }
+    body .advisory_card {
+      background-color: #232323 !important; }
+    body .card_name, body .phone_number, body .weChat_number, body .workTime_number {
+      color: rgba(255, 255, 255, 0.9) !important; }
+    body .phone_title, body .weChat_title, body .workTime_title, body .advisory_footer {
+      color: rgba(255, 255, 255, 0.56) !important; } }
+
 /*# sourceMappingURL=advisory.css.map */

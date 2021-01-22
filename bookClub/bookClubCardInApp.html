@@ -87,7 +87,12 @@
             },
 
             guestBinding: function () {
-                javaFunction('16','','')
+                if (getLocationHrefPara2('version')) {
+                    const arr = { 'type': '16', 'idStr': '', 'otherStr': '' };
+                    window.webkit.messageHandlers.javaFunction.postMessage(arr)
+                } else {
+                    javaFunction('16','','')   
+                }
             }
         }
     })

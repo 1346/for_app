@@ -8,9 +8,10 @@ var vm = new Vue({
     },
     methods: {
         getDetail: function() {
+            const id = getLocationHrefPara2("id").split('?')[0];
             $.ajax({
                 url: window.location.origin +
-                    '/cactus/train/web/ask?id=' + getLocationHrefPara2('id'),
+                    '/cactus/train/web/ask?id=' + id,
                 type: 'GET',
                 dataType: 'json',
                 data: {}

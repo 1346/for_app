@@ -419,3 +419,26 @@ img { pointer-events: none; }
 [v-cloak] {
   display: none !important;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212 !important;
+    .header_footer {
+      background-color: #121212 !important;
+    }
+    .newImageIcon {
+      background-color: #232323 !important;
+      .content_text, .content_value {
+        color: rgba(255, 255, 255, 0.56) !important;
+      }
+    }
+    .detail_content {
+      p {
+        color: rgba(255, 255, 255, 0.9) !important;
+      }
+    }
+    .footer {
+      color: rgba(255, 255, 255, 0.56) !important;
+    }
+  }
+}

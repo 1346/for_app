@@ -80,4 +80,26 @@ body {
   margin-bottom: 0.5rem;
   font-size: 0.3rem; }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212 !important; }
+    body .mui-content {
+      background-color: #121212 !important; }
+    body .subject_title {
+      color: rgba(255, 255, 255, 0.9) !important; }
+    body .subject_content .list {
+      background-color: #232323 !important; }
+      body .subject_content .list .list_top .top_num {
+        color: rgba(255, 255, 255, 0.56) !important; }
+      body .subject_content .list .list_top .top_name, body .subject_content .list .list_top .top_phone {
+        color: rgba(255, 255, 255, 0.9) !important; }
+      body .subject_content .list .list_bottom .bottom_time, body .subject_content .list .list_bottom .refunded {
+        color: rgba(255, 255, 255, 0.56) !important; }
+      body .subject_content .list .list_footer .footer_norm {
+        color: rgba(255, 255, 255, 0.56) !important; }
+        body .subject_content .list .list_footer .footer_norm .norm_title {
+          color: rgba(255, 255, 255, 0.9) !important; }
+    body .more {
+      color: rgba(255, 255, 255, 0.9) !important; } }
+
 /*# sourceMappingURL=subject_list.css.map */

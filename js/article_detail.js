@@ -11,7 +11,8 @@ var vm = new Vue({
         isShare: false,
         isVideo: false,
         isPlay: false,
-        detail: {}
+        detail: {},
+        isDark: false
     },
     created: function() {
       this.getDetail();
@@ -76,3 +77,20 @@ var vm = new Vue({
         }
     }
 });
+
+const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+ 
+function darkModeHandler() {
+    if (mediaQuery.matches) {
+        // console.log('现在是深色模式')
+        vm.isDark = true;
+    } else {
+        // console.log('现在是浅色模式')
+        vm.isDark = false;
+    }
+}
+ 
+// 判断当前模式
+darkModeHandler()
+// 监听模式变化
+mediaQuery.addListener(darkModeHandler)
